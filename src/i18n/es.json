@@ -1,0 +1,11 @@
+{
+  "TITLE": "Victor Andres Barilin",
+  "DESCRIPTION": "Mi portafolio profesional, soy un desarrollador de software orientado al front-end",
+  "HEADER": {
+    "EXPERIENCE": "Experiencia",
+    "SKILLS": "Habilidades",
+    "PROJECT": "Proyectos",
+    "ABOUT": "Sobre mi",
+    "CONTACT": "Contacto"
+  }
+}

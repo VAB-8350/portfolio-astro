@@ -1,0 +1,108 @@
+---
+import { getI18N } from '@i18n/index'
+const i18n = getI18N(Astro.currentLocale)
+
+const language = Astro.currentLocale
+---
+
+<script>
+    const hoverBox = document.getElementById('background-hover')
+    const navbar = document.querySelectorAll('nav .desktop a')
+
+    console.log('hola')
+
+    navbar.forEach((item) => {
+        item.addEventListener('mouseenter', () => {
+        const {left, top, width, height} = item.getBoundingClientRect()
+
+        hoverBox.style.opacity = '1'
+        hoverBox.style.setProperty('--left', `${left}px`)
+        hoverBox.style.setProperty('--top', `${top}px`)
+        hoverBox.style.setProperty('--height', `${height}px`)
+        hoverBox.style.setProperty('--width', `${width}px`)
+        })
+
+        item.addEventListener('mouseleave', () => {
+        hoverBox.style.opacity = '0'
+        })
+    })
+
+</script>
+
+<header class="bg-white dark:bg-semi-black w-full flex justify-between h-16 border-b border-outline-light dark:border-outline-dark px-5 md:px-24 sticky top-0">
+    <section>
+        <ul class="h-full flex gap-3 items-center text-sm ">
+            <li>
+                <a href="/es">
+                    <img
+                        class=`h-4 rounded-sm ${language === 'es' ? 'opacity-40 cursor-not-allowed' : ''}`
+                        src="/ARG.png"
+                        alt="Idioma en espaniol"
+                    >
+                </a>
+            </li>
+            <li>
+                <a href="/">
+                    <img
+                        class=`h-4 rounded-sm ${language === 'en' ? 'opacity-40 cursor-not-allowed' : ''}`
+                        src="/EEUU.jpg"
+                        alt="Idioma en ingles"
+                    >
+                </a>
+            </li>
+        </ul>
+    </section>
+    <nav class="flex items-center">
+        <ul class="text-secondary-light-text dark:text-[#EEEEEE] font-['Geist'] h-full items-center text-sm hidden sm:flex desktop">
+            <li>
+                <a class="p-2" href="">{i18n.HEADER.EXPERIENCE}</a>
+            </li>
+            <li>
+                <a class="p-2" href="">{i18n.HEADER.SKILLS}</a>
+            </li>
+            <li>
+                <a class="p-2" href="">{i18n.HEADER.PROJECT}</a>
+            </li>
+            <li>
+                <a class="p-2" href="">{i18n.HEADER.ABOUT}</a>
+            </li>
+            <li>
+                <a class="p-2" href="">{i18n.HEADER.CONTACT}</a>
+            </li>
+            <span id="background-hover" class={`
+                absolute bg-hover-light dark:bg-hover-dark rounded-md -z-10
+                top-[var(--top)] left-[var(--left)] w-[var(--width)] h-[var(--height)]
+                transition-all duration-300 easy-in-out p
+            `} />
+        </ul>
+
+        <div class="sm:hidden flex">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+            </button>
+            <ul class="text-secondary-light-text dark:text-[#EEEEEE] font-['Geist'] absolute top-[64px] right-0 bg-yellow-300 text-sm sm:hidden flex">
+                <li>
+                    <a class="p-2" href="">{i18n.HEADER.EXPERIENCE}</a>
+                </li>
+                <li>
+                    <a class="p-2" href="">{i18n.HEADER.SKILLS}</a>
+                </li>
+                <li>
+                    <a class="p-2" href="">{i18n.HEADER.PROJECT}</a>
+                </li>
+                <li>
+                    <a class="p-2" href="">{i18n.HEADER.ABOUT}</a>
+                </li>
+                <li>
+                    <a class="p-2" href="">{i18n.HEADER.CONTACT}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<style>
+    header {
+        filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.10));
+    }
+</style>

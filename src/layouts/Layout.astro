@@ -1,0 +1,42 @@
+---
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+
+import { getI18N } from '@i18n/index'
+import PlanetBackground from '@components/PlanetBackground.astro'
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+const i18n = getI18N(Astro.currentLocale)
+---
+
+<!doctype html>
+<html lang={Astro.currentLocale}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={i18n.DESCRIPTION} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{i18n.TITLE || 'Victor Andres Barilin'}</title>
+	</head>
+	<body class="bg-semi-white dark:bg-black relative overflow-hidden">
+		<PlanetBackground />
+		<Header client:load />
+		<slot />
+		<Footer /> 
+	</body>
+</html>
+<style is:global>
+	@font-face {
+		font-family: 'Geist';
+		src: url('/fonts/Geist-Regular.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+</style>
