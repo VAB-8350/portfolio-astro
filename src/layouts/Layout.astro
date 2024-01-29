@@ -4,12 +4,11 @@ import Footer from '@components/Footer.astro';
 
 import { getI18N } from '@i18n/index'
 import PlanetBackground from '@components/PlanetBackground.astro'
+import SocialMedia from '@components/SocialMedia.astro';
 
 interface Props {
 	title: string;
 }
-
-const { title } = Astro.props;
 
 const i18n = getI18N(Astro.currentLocale)
 ---
@@ -24,17 +23,50 @@ const i18n = getI18N(Astro.currentLocale)
 		<meta name="generator" content={Astro.generator} />
 		<title>{i18n.TITLE || 'Victor Andres Barilin'}</title>
 	</head>
-	<body class="bg-semi-white dark:bg-black relative overflow-hidden">
-		<PlanetBackground />
+	<body class="bg-semi-white dark:bg-black overflow-x-hidden">
 		<Header client:load />
 		<slot />
-		<Footer /> 
+		<Footer />
+		<PlanetBackground />
+		<SocialMedia />
 	</body>
 </html>
 <style is:global>
 	@font-face {
+		font-family: 'Geist Light';
+		src: url('/fonts/Geist-Light.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
 		font-family: 'Geist';
 		src: url('/fonts/Geist-Regular.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Geist Medium';
+		src: url('/fonts/Geist-Medium.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Geist Bold';
+		src: url('/fonts/Geist-Bold.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Geist Black';
+		src: url('/fonts/Geist-Black.otf');
 		font-weight: normal;
 		font-style: normal;
 		font-display: swap;

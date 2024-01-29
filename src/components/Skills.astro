@@ -1,0 +1,113 @@
+---
+import { getI18N } from '@i18n/index'
+const i18n = getI18N(Astro.currentLocale)
+---
+
+<script>
+  const techs = document.querySelectorAll('.group')
+  const title = document.getElementById('title')
+  const originalTitle = title.innerText
+  const content = document.getElementById('container-skills')
+
+  content.addEventListener('mouseleave', () => {
+    title.classList.add('opacity-0')
+      setTimeout(() => {
+        title.innerText = originalTitle
+        title.style.color = ''
+        title.classList.remove('opacity-0')
+        title.style.transform = 'translateY(0)'
+      }, 300)
+  })
+
+  techs?.forEach((tech) => {
+    tech.addEventListener('mouseenter', () => {
+
+      setTimeout(() => {
+        title.classList.add('opacity-0')
+        title.style.transform = 'translateY(-60px)'
+
+        setTimeout(() => {
+          title.innerText = tech.id
+          if (tech.getAttribute('color').includes('#fff')) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) title.style.color = tech.getAttribute('color')
+            else title.style.color = '#000'
+          } else {
+            title.style.color = tech.getAttribute('color')
+          }
+
+          title.classList.remove('opacity-0')
+          title.style.transform = 'translateY(0)'
+        }, 200)
+      }, 200)
+    })
+
+    tech.addEventListener('mouseleave', () => {
+      title.classList.add('opacity-0')
+      title.style.transform = 'translateY(60px)'
+
+      setTimeout(() => {
+        title.classList.add('opacity-0')
+        title.style.transform = 'translateY(-60px)'
+      },200)
+    })
+  })
+</script>
+
+<section class="grid grid-cols-4 md:grid-cols-[repeat(5,_minmax(200px,_1fr))] place-items-center auto-rows-[100px] md:auto-rows-[200px] relative" id="container-skills">
+  <span class="inline-block w-[20px] h-[20px] absolute top-[-11px] left-[-11px]"/>
+  <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] right-[-10px]"/>
+  <div class="w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-2">
+    <h2 class="text-black dark:text-white font-['Geist Bold'] font-bold text-3xl text-center duration-300" id="title">{i18n.SKILLS}</h2>
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#3880f6" id="CSS">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#3880f6]" src="/skillTech/css.png" alt="css">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#00d9ff" id="React.js">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#00d9ff]" src="/skillTech/react.png" alt="react">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#ffffff" id="Next.js">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#ffffff] mix-blend-difference dark:mix-blend-normal" src="/skillTech/nextjs.png" alt="next">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#ff5e5b" id="Figma">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#ff5e5b]" src="/skillTech/figma.png" alt="figma">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#eae839" id="JavaScript">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#eae839]" src="/skillTech/javascript.png" alt="javascript">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#00b6d8" id="Tailwind">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#00b6d8]" src="/skillTech/tailwind.png" alt="tailwind">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#fc2d23" id="Git">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#fc2d23]" src="/skillTech/git.png" alt="git">
+  </div>
+  <div class="group w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#ffffff" id="GitHub">
+    <img class="w-16 object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#ffffff] mix-blend-difference dark:mix-blend-normal" src="/skillTech/github.png" alt="github">
+  </div>
+</section>
+
+<style>
+  span::before, span::after {
+    content: '';
+    position: absolute;
+    background-color: #666;
+    display: inline-block;
+  }
+
+  span::before {
+    top: 10px;
+    width: 20px;
+    height: 1px;
+  }
+
+  span::after {
+    left: 10px;
+    height: 20px;
+    width: 1px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    span::before, span::after {
+      background-color: #FFF;
+    }
+  }
+</style>

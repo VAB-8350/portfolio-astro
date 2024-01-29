@@ -1,0 +1,95 @@
+---
+interface Props {
+  title: string
+  description: string
+  image: string
+  logo: string
+  tech: string[]
+  link: string
+  linkCode?: string
+}
+
+const { title, description, image, logo, tech, link, linkCode = false } = Astro.props;
+
+import { getI18N } from '@i18n/index'
+const i18n = getI18N(Astro.currentLocale)
+---
+
+<article class="flex flex-col w-[360px] border border-outline-light dark:border-outline-dark rounded-[6px] relative bg-semi-white/70 dark:bg-black/50">
+  <picture class="inline-block w-full">
+    <img class="rounded-t-md w-full border-b border-outline-light dark:border-outline-dark" src={image} alt={title}>
+  </picture>
+
+  <div class="flex flex-col gap-2 p-4 justify-between h-full">
+    <div class="flex items-end gap-3">
+      <img src={logo} alt={title}>
+      <h4 class="text-xl font-['Geist Bold'] font-bold text-black dark:text-white">{title}</h4>
+    </div>
+
+    <p class="text-secondary-light-text dark:text-secondary-dark-text">{description}</p>
+
+    <div class="flex flex-wrap gap-1 w-full mb-2">
+      {
+        tech?.map(techItem => (
+          <span class="text-secondary-light-text dark:text-secondary-dark-text px-2 bg-hover-light dark:bg-hover-dark rounded-3xl">{techItem}</span>
+        ))
+      }
+    </div>
+
+    <div class="mt-auto flex gap-2">
+      <a class="bg-black dark:bg-white rounded-3xl font-['Geist'] text-md text-white dark:text-black dark:shadow-none py-2 px-4 flex gap-2 w-fit" href={link} target='_blank'>
+        {i18n['LINK-SITE']}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+      </a>
+      {
+        linkCode &&
+        <a class="bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 px-4 flex w-fit" href={linkCode} target="_blank">
+          GitHub
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+        </a>
+      }
+    </div>
+  </div>
+</article>
+
+<!-- <style>
+  article::before {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    top: -1px;
+    right: -1px;
+    border-radius: 0 6px 0 6px;
+    background-color: #FAFAFA;
+    border-left: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    /* background: linear-gradient(45deg, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 50%); */
+  }
+
+  article::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 71px;
+    height: 1px;
+    top: 49px;
+    right: -1.5px;
+    transform: rotateZ(45deg);
+    transform-origin: right;
+    background-color: #E6E6E6;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    article::before {
+      background-color: #000;
+      border-left: 1px solid #242424;
+      border-bottom: 1px solid #242424;
+    }
+
+    article::after {
+      background-color: #242424;
+    }
+  }
+</style> -->

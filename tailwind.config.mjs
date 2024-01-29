@@ -8,6 +8,7 @@ export default {
 				'semi-black': '#0A0A0A',
 				'outline-dark': '#242424',
 				'hover-dark': '#1F1F1F',
+				'secondary-dark-text': '#A1A1A1',
 
 				// light
 				'semi-white': '#FAFAFA',

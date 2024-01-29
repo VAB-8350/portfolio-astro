@@ -1,0 +1,71 @@
+---
+import { getI18N } from '@i18n/index'
+const i18n = getI18N(Astro.currentLocale)
+---
+
+<section class="grid grid-cols-4 md:grid-cols-[repeat(4,_minmax(200px,_1fr))] place-items-center auto-rows-[100px_auto_auto] md:auto-rows-[200px_auto] relative mt-3 border-t border-outline-light dark:border-outline-dark">
+
+  <div class="w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-4 relative">
+    <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] left-[-11px]"/>
+    <h2 class="text-black dark:text-white font-['Geist Bold'] font-bold text-3xl text-center">{i18n.EXPERIENCE.TITLE}</h2>
+  </div>
+
+  <div class="p-4 md:p-12 text-sm md:text-xl w-full h-full flex flex-col gap-4 border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-2">
+
+    <div class="flex items-center gap-2">
+      <img src="/devias.png" alt="Devias">
+      <h4 class="text-xl md:text-3xl font-bold text-secondary-light-text dark:text-secondary-dark-text">Devias</h4>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      {
+        i18n.EXPERIENCE.DEVIAS.map((text) => (
+          <p class="text-secondary-light-text dark:text-secondary-dark-text">{text}</p>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="p-4 md:p-12 text-sm md:text-xl w-full h-full flex flex-col gap-4 border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-2">
+    <div class="flex items-center gap-2">
+      <img src="/arbot.png" alt="ArboT">
+      <h4 class="text-xl md:text-3xl font-bold text-secondary-light-text dark:text-secondary-dark-text">ArboT</h4>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      {
+        i18n.EXPERIENCE.ARBOT.map((text) => (
+          <p class="text-secondary-light-text dark:text-secondary-dark-text">{text}</p>
+        ))
+      }
+    </div>
+  </div>
+  <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] right-[-10px]"/>
+</section>
+
+<style>
+  span::before, span::after {
+    content: '';
+    position: absolute;
+    background-color: #666;
+    display: inline-block;
+  }
+
+  span::before {
+    top: 10px;
+    width: 20px;
+    height: 1px;
+  }
+
+  span::after {
+    left: 10px;
+    height: 20px;
+    width: 1px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    span::before, span::after {
+      background-color: #FFF;
+    }
+  }
+</style>
