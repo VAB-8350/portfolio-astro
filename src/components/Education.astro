@@ -1,5 +1,5 @@
 <section class="max-w-[90%] md:max-w-[1100px] mb-48 mx-auto">
-  <h2 class="text-8xl font-medium">EDUCATION</h2>
+  <h2 class="text-8xl font-normal dark:text-black text-white">EDUCATION</h2>
 
   <!-- Time Line -->
   <section>
@@ -9,8 +9,9 @@
 
 <style>
   h2 {
-    --ds-gray-1000-value: 0,0%,93%;
+    --ds-gray-1000-value: 0,0%,9%;
     --ds-gray-1000: hsla(var(--ds-gray-1000-value),1);
+
 
     display: flex;
     align-items: center;
@@ -21,5 +22,13 @@
     padding-left: 16px;
     mask-image: var(--mask);
     -webkit-mask-image: var(--mask);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    h2{
+      --ds-gray-1000-value: 0,0%,93%;
+      background: repeating-linear-gradient(90deg,var(--ds-gray-1000),var(--ds-gray-1000) 1px,transparent 1px,transparent 2px);
+    --mask: linear-gradient(90deg,#000 30%,rgba(0,0,0,.2) 90%,transparent);
+    }
   }
 </style>
