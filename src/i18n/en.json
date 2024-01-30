@@ -36,5 +36,12 @@
       "Este fue mi primer trabajo orientado al desarrollo de software web, donde pude adquirir mucha experiencia apoyado por un buen equipo.",
       "No solo hice desarrollo web, sino que también tuve la oportunidad de poder contribuir al desarrollo de una aplicación para teléfono, utilizando React Native."
     ]
+  },
+  "EDUCATION": {
+    "TITLE": "EDUCATION",
+    "STATES": {"ALWAYS": "Always", "CURRENT": "Current"},
+    "PLATZI": "Platzi is an online education platform, where you will find courses on various topics of which I focus on web development",
+    "ITEC": "iTec is a tertiary education institute where I studied software development",
+    "GOOGLE": "On these platforms I stay up to date on the world of technology, and I also quickly search for information when I find myself solving problems."
   }
 }

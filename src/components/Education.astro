@@ -1,5 +1,10 @@
+---
+import { getI18N } from '@i18n/index'
+const i18n = getI18N(Astro.currentLocale)
+---
+
 <section class="max-w-[90%] md:max-w-[1100px] mb-48 mx-auto">
-  <h2 class="text-5xl font-extrabold py-3 md:text-8xl md:font-normal md:h-24 w-full md:w-[70%] dark:text-black text-white">EDUCATION</h2>
+  <h2 class="text-5xl font-extrabold py-3 md:text-8xl md:font-normal md:h-24 w-full md:w-[70%] dark:text-black text-white">{i18n.EDUCATION.TITLE}</h2>
 
 
   <section class="mt-6 md:mt-16">
@@ -19,7 +24,7 @@
           </div>
 
           <p class="text-sm text-secondary-light-text dark:text-secondary-dark-text md:mt-3">
-            iTec es un instituto de educacion nivel terciario en el que estudiaba desarrollo de software
+            {i18n.EDUCATION.ITEC}
           </p>
 
         </article>
@@ -41,11 +46,11 @@
               <h5 class="text-black dark:text-white font-bold text-xl md:text-3xl">Platzi</h5>
             </div>
 
-            <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">2022 - current</span>
+            <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">2022 - {i18n.EDUCATION.STATES.CURRENT}</span>
           </div>
 
           <p class="text-sm text-secondary-light-text dark:text-secondary-dark-text md:mt-3">
-            Platzi es una plataforma de educación online, donde encontrarás cursos de diversos temas de los cuales yo me enfoque en desarrollo web
+            {i18n.EDUCATION.PLATZI}
           </p>
 
         </article>
@@ -83,11 +88,11 @@
             <h5 class="text-black dark:text-white font-bold text-xl md:text-3xl">YouTube</h5>
           </div>
 
-          <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">Always</span>
+          <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">{i18n.EDUCATION.STATES.ALWAYS}</span>
         </div>
 
         <p class="text-sm text-secondary-light-text dark:text-secondary-dark-text md:mt-3">
-          En estas plataformas me mantengo al dia sobre el mundo de la tacnologia, y tambien busco informacion rapidamente cuando me encuentro resolviendo problemas
+          {i18n.EDUCATION.GOOGLE}
         </p>
 
 
