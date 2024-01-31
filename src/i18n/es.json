@@ -22,6 +22,8 @@
     "THIRD-P": "Actualmente trabajo en Devias como Desarrollador Front-end mayormente abocado a “buckedup.com”, un e-commerce establecido en Estados Unidos, desde hace aproximadamente dos años y a eso agrego mi experiencia en ArboT, (empresa de robótica)."
   },
   "PROJECTS": {
+    "TITLE": "Mis Trabajos",
+    "DESCRIPTION": "En esta seccion podra encontrar algunos de mis trabajo para conocer un poco mas sobre mi.",
     "BUCKEDUP-DESCRIPTION":  "Estes es  mi trabajo actual, se trata de un e-commerce de una empresa de estados unidos, en la cual trabajaba como desarrollador frontend.",
     "B-LARGE-DESCRIPTION": "B-Large es un “e-commerce” con productos de Amazon, y en este proyecto personal tuve la oportunidad de desarrollar tanto Front-end como Back-end."
   },
