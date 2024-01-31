@@ -22,17 +22,17 @@ const i18n = getI18N(Astro.currentLocale)
 
       <form class="flex flex-col gap-4 w-full p-5 md:p-8 border bg-white dark:bg-black border-outline-light dark:border-outline-dark rounded-[24px]" action="">
         <div class="flex flex-col">
-          <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="">
+          <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="email">
             {i18n['TALK-TO-ME']['INPUT-EMAIL']}
           </label>
-          <input class="h-[40px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text px-3" type="text">
+          <input class="h-[40px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text px-3" type="text" id="email">
         </div>
 
         <div class="flex flex-col">
-          <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="">
+          <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="message">
             {i18n['TALK-TO-ME']['INPUT-MESSAGE']}
           </label>
-          <textarea class="max-h-[217px] min-h-[217px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text p-3" name="" id="" cols="30" rows="10"></textarea>
+          <textarea class="max-h-[217px] min-h-[217px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text p-3" name="" id="message" cols="30" rows="10"></textarea>
         </div>
 
         <button class="h-[40px] w-full md:w-fit rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-light-text dark:text-secondary-dark-text px-10 hover:bg-hover-light hover:dark:bg-hover-dark duration-300">

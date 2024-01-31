@@ -10,6 +10,16 @@ const i18n = getI18N(Astro.currentLocale)
 
   async function copyEmail () {
     await navigator.clipboard.writeText('victor.barilin@gmail.com');
+
+    copyBtn.classList.remove('after:hidden')
+    copyBtn.setAttribute('disabled', 'true')
+
+    setTimeout(() => {
+      copyBtn.classList.add('after:hidden')
+      copyBtn.removeAttribute('disabled')
+    }, 2000)
+
+
   }
 </script>
 
@@ -44,8 +54,9 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="flex flex-col gap-3 mt-auto md:mt-1 w-full sm:w-auto">
       <!-- email -->
       <div class="order-4 md:order-1 flex gap-2 justify-center md:justify-start sm:order-1">
-        <button id="copy-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy stroke-secondary-light-text dark:stroke-secondary-dark-text" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
+
+        <button id="copy-btn" class="active:scale-110 relative after:content-['Copy'] after:font-semibold after:bg-white after:dark:bg-semi-black after:text-green-500 after:absolute after:left-[-65px] after:top-[-50%] after:border after:border-outline-light after:dark:border-outline-dark after:p-2 after:rounded-md after:hidden duration-200 disabled:cursor-not-allowed" aria-label="Copy Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy stroke-secondary-light-text dark:stroke-secondary-dark-text active:stroke-green-500 duration-300" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
         </button>
 
         <a href="mailto:victor.barilin2014@gmail.com" class="flex gap-2 text-secondary-light-text dark:text-secondary-dark-text underline">

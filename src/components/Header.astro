@@ -62,7 +62,7 @@ const language = Astro.currentLocale
     <section>
         <ul class="h-full flex gap-3 items-center text-sm ">
             <li>
-                <a href="/es" aria-label="Change of language to spanish">
+                <a href="/es" aria-label="Español">
                     <img
                         class=`h-4 rounded-sm ${language === 'es' ? 'opacity-40 cursor-not-allowed' : ''}`
                         src="/ARG.png"
@@ -71,7 +71,7 @@ const language = Astro.currentLocale
                 </a>
             </li>
             <li>
-                <a href="/" aria-label="Cambiar de idioma a ingles">
+                <a href="/" aria-label="Ingles">
                     <img
                         class=`h-4 rounded-sm ${language === 'en' ? 'opacity-40 cursor-not-allowed' : ''}`
                         src="/EEUU.jpg"
@@ -101,7 +101,7 @@ const language = Astro.currentLocale
             <li>
                 <a class="p-2" href="#talk-to-me-section">{i18n.HEADER.CONTACT}</a>
             </li>
-            <span id="background-hover" class={`
+            <li id="background-hover" class={`
                 absolute bg-hover-light dark:bg-hover-dark rounded-md -z-10
                 top-[var(--top)] left-[var(--left)] w-[var(--width)] h-[var(--height)]
                 transition-all duration-300 easy-in-out
@@ -131,23 +131,23 @@ const language = Astro.currentLocale
             </button>
             <ul id="mobile-nav" class="text-secondary-light-text dark:text-[#EEEEEE] font-['Geist'] absolute top-[74px] right-5 text-sm sm:hidden flex bg-white dark:bg-semi-black flex-col gap-3 border border-outline-light dark:border-outline-dark rounded-md py-5 px-3 min-w-[40%] shadow-lg dark:shadow-none transition-all duration-300 opacity-0 right-[100%] easy-in-out">
                 <li>
-                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="">{i18n.HEADER.EXPERIENCE}</a>
+                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="#experience">{i18n.HEADER.EXPERIENCE}</a>
                 </li>
                 <li>
-                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="">{i18n.HEADER.SKILLS}</a>
+                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="#container-skills">{i18n.HEADER.SKILLS}</a>
                 </li>
                 <li>
-                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="">{i18n.HEADER.PROJECT}</a>
+                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="#project">{i18n.HEADER.PROJECT}</a>
                 </li>
                 <li>
-                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="">{i18n.HEADER.ABOUT}</a>
+                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="#about">{i18n.HEADER.ABOUT}</a>
                 </li>
                 <li>
-                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="">{i18n.HEADER.CONTACT}</a>
+                    <a class="p-2 active:bg-hover-light dark:active:bg-hover-dark rounded-md" href="#talk-to-me-section">{i18n.HEADER.CONTACT}</a>
                 </li>
 
                 <li class="flex w-full justify-between mt-7">
-                    <a class="p-2" href="#">
+                    <a class="p-2" href="mailto:victor.barilin2014@gmail.com">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
                     </a>
                     <a class="p-2" href="https://www.linkedin.com/in/andres-barilin-1b8a0a1b4/">
