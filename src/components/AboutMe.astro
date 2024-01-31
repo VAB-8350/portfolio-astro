@@ -3,7 +3,7 @@ import { getI18N } from '@i18n/index'
 const i18n = getI18N(Astro.currentLocale)
 ---
 
-<section class="grid grid-cols-4 md:grid-cols-[repeat(5,_minmax(200px,_1fr))] place-items-center auto-rows-[100px_auto_auto] md:auto-rows-[200px_auto] relative">
+<section class="grid grid-cols-4 md:grid-cols-[repeat(5,_minmax(200px,_1fr))] place-items-center auto-rows-[100px_auto_auto] md:auto-rows-[200px_auto] relative bg-[rgba(0,_0,_0,_.5)]">
 
   <div class="w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-2 relative">
     <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] md:top-[-11px] left-[-11px]"/>
@@ -12,12 +12,12 @@ const i18n = getI18N(Astro.currentLocale)
   </div>
 
   <div class="p-4 md:p-12 text-sm md:text-xl w-full h-full grid place-items-center border-r md:border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-3">
-    <p class="text-secondary-light-text dark:text-secondary-dark-text">{i18n['ABOUT-ME']['FIRST-P']}</p>
+    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['FIRST-P']}</p>
   </div>
 
   <div class="p-4 md:p-12 text-sm md:text-xl w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-5">
-    <p class="pb-5 text-secondary-light-text dark:text-secondary-dark-text">{i18n['ABOUT-ME']['SECOND-P']}</p>
-    <p class="text-secondary-light-text dark:text-secondary-dark-text">{i18n['ABOUT-ME']['THIRD-P']}</p>
+    <p class="pb-5 text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['SECOND-P']}</p>
+    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['THIRD-P']}</p>
   </div>
   <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] right-[-10px]"/>
 </section>

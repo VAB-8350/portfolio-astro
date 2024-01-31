@@ -3,7 +3,7 @@ import { getI18N } from '@i18n/index'
 const i18n = getI18N(Astro.currentLocale)
 ---
 
-<section class="grid grid-cols-4 md:grid-cols-[repeat(4,_minmax(200px,_1fr))] place-items-center auto-rows-[100px_auto_auto] md:auto-rows-[200px_auto] relative mt-3 border-t border-outline-light dark:border-outline-dark">
+<section class="grid grid-cols-4 md:grid-cols-[repeat(4,_minmax(200px,_1fr))] place-items-center auto-rows-[100px_auto_auto] md:auto-rows-[200px_auto] relative mt-3 border-t border-outline-light dark:border-outline-dark bg-[rgba(0,_0,_0,_.5)]">
 
   <div class="w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-4 relative">
     <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] left-[-11px]"/>
@@ -20,7 +20,7 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="flex flex-col gap-3">
       {
         i18n.EXPERIENCE.DEVIAS.map((text) => (
-          <p class="text-secondary-light-text dark:text-secondary-dark-text">{text}</p>
+          <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{text}</p>
         ))
       }
     </div>
@@ -35,7 +35,7 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="flex flex-col gap-3">
       {
         i18n.EXPERIENCE.ARBOT.map((text) => (
-          <p class="text-secondary-light-text dark:text-secondary-dark-text">{text}</p>
+          <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{text}</p>
         ))
       }
     </div>
