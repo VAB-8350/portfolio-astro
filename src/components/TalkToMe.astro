@@ -1,0 +1,73 @@
+---
+import { getI18N } from '@i18n/index'
+const i18n = getI18N(Astro.currentLocale)
+---
+
+<section class="max-w-[90%] md:max-w-[1100px] pb-[108px] mx-auto" id="talk-to-me-section">
+  <h2 class="text-black dark:text-white font-['Geist Bold'] font-extrabold text-4xl md:text-6xl text-center mb-6 md:mb-16">{i18n['TALK-TO-ME'].TITLE}</h2>
+
+  <div class="flex gap-6 md:gap-12 flex-col md:flex-row">
+    <div class="w-full flex flex-col justify-between">
+      {
+        i18n['TALK-TO-ME'].TEXT.map((text) => (
+          <p class="text-secondary-light-text dark:text-secondary-dark-text mb-3 text-sm md:text-xl">
+            {text}
+          </p>
+        ))
+      }
+    </div>
+
+    <div class="w-full relative p-[1px] rounded-[25px] overflow-hidden">
+      <span id="light" class="-z-10" />
+
+      <form class="flex flex-col gap-4 w-full p-5 md:p-8 border bg-white dark:bg-black border-outline-light dark:border-outline-dark rounded-[24px]" action="">
+        <div class="flex flex-col">
+          <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="">
+            {i18n['TALK-TO-ME']['INPUT-EMAIL']}
+          </label>
+          <input class="h-[40px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text px-3" type="text">
+        </div>
+
+        <div class="flex flex-col">
+          <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="">
+            {i18n['TALK-TO-ME']['INPUT-MESSAGE']}
+          </label>
+          <textarea class="max-h-[217px] min-h-[217px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text p-3" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+
+        <button class="h-[40px] w-full md:w-fit rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-light-text dark:text-secondary-dark-text px-10 hover:bg-hover-light hover:dark:bg-hover-dark duration-300">
+          {i18n['TALK-TO-ME']['SEND-BTN']}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  #light {
+    display: inline-block;
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    background: radial-gradient(circle, rgba(255,0,255,1) 0%, rgba(252,70,107,0) 70%);
+  }
+</style>
+
+<script>
+  document.querySelector('body').addEventListener("mousemove", move)
+  const light = document.getElementById("light");
+
+  function move (e) {
+
+    let auxX
+    if (e.clientX <= document.body.clientWidth / 2) auxX = 0
+    else auxX = (e.clientX - document.body.clientWidth / 2) * 2
+
+    const x = (auxX * 100) / window.innerWidth - 35
+    const y = (e.clientY * 100) / window.innerHeight - 35
+
+    light.style.left = `${x}%`
+    light.style.top = `${y}%`
+  }
+
+</script>

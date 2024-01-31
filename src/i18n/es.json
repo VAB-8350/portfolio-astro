@@ -43,5 +43,22 @@
     "PLATZI": "Platzi es una plataforma de educación online, donde encontrarás cursos de diversos temas de los cuales yo me enfoque en desarrollo web",
     "ITEC": "iTec es un instituto de educacion nivel terciario en el que estudiaba desarrollo de software",
     "GOOGLE": "En estas plataformas me mantengo al dia sobre el mundo de la tacnologia, y tambien busco informacion rapidamente cuando me encuentro resolviendo problemas"
+  },
+  "TALK-TO-ME": {
+    "TITLE": "Háblame!",
+    "TEXT": [
+      "¡Hola! Si has llegado hasta aquí, es probable que tengamos algo interesante de qué hablar.",
+      "Estoy siempre abierto a nuevas conexiones, ideas emocionantes y oportunidades de colaboración.",
+      "Si tienes un proyecto que despierta curiosidad o simplemente quieres charlar sobre el último gadget tecnológico o tu musica rock favorita, ¡estoy aquí! No dudes en enviar un mensaje y hagamos que las cosas sucedan.",
+      "¡Hasta luego!"
+    ],
+    "INPUT-EMAIL": "Email",
+    "INPUT-MESSAGE": "¿Cómo puedo ayudarte?",
+    "SEND-BTN": "Enviar"
+  },
+  "FOOTER": {
+    "LEFT": "Diseño inspirado en Vercel...",
+    "RIGHT": "Proyecto realizado con Astro y Tailwind",
+    "LINK-TEXT": "Ver código"
   }
 }

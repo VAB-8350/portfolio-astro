@@ -5,18 +5,22 @@ import Projects from '@components/Projects/Projects.astro';
 import Skills from '@components/Skills.astro';
 import AboutMe from '@components/AboutMe.astro';
 import Experience from '@components/Experience.astro';
-import Education from './Education.astro';
+import Education from '@components/Education.astro';
+import TalkToMe from '@components/TalkToMe.astro'
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<Presentation />
 		<Projects />
+
 		<div class="mt-16 mb-20 border-t border-l border-outline-light dark:border-outline-dark max-w-[90%] md:max-w-[1100px] mx-auto">
 			<Skills client:load/>
 			<AboutMe />
 			<Experience />
 		</div>
+
 		<Education />
+		<TalkToMe client:load/>
 	</main>
 </Layout>
