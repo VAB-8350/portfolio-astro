@@ -24,27 +24,28 @@
   "PROJECTS": {
     "TITLE": "My Works",
     "DESCRIPTION": "In this section you can find some of my work to learn a little more about me.",
-    "BUCKEDUP-DESCRIPTION": "This is my current job, it is an e-commerce for a company in the United States, where I worked as a frontend developer.",
+    "BUCKEDUP-DESCRIPTION": "This is my current job, it is the e-commerce for a company in the United States, where I worked as a frontend developer.",
     "B-LARGE-DESCRIPTION": "B-Large is an “e-commerce” with Amazon products, and in this personal project I had the opportunity to develop both Front-end and Back-end."
   },
   "EXPERIENCE": {
     "TITLE": "Experience",
     "ARBOT": [
-      "En este puesto llevar a cabo trabajos más relacionados con la robótica, realizando tareas como montaje y diseños de placas electrónicas, diseño 3D y desarrollo de software.",
-      "En este trabajo no tuve la oportunidad de utilizar muchas tecnologías web, pero él me dio la oportunidad de resolver varios desafíos de manera lógica.",
-      "Cabe aclarar que actualmente esta empresa ya no existe."
+      "In this position I carried out work more related to robotics, performing tasks such as assembly and designs of electronic boards, 3D design and software development.",
+      "While I didn't have the opportunity to use many web technologies, this job allowed me to solve several challenges logically.",
+      "It should be noted that currently this company no longer exists."
     ],
     "DEVIAS": [
-      "Este fue mi primer trabajo orientado al desarrollo de software web, donde pude adquirir mucha experiencia apoyado por un buen equipo.",
-      "No solo hice desarrollo web, sino que también tuve la oportunidad de poder contribuir al desarrollo de una aplicación para teléfono, utilizando React Native."
+      "This is my first job focused on web software development, where I was able to gain a lot of experience supported by a good team.",
+      "I have currently been working in this company for approximately 2 years.",
+      "Not only do I do web development, but I also had the opportunity to contribute to the development of a mobile application, using React Native."
     ]
   },
   "EDUCATION": {
     "TITLE": "EDUCATION",
     "STATES": {"ALWAYS": "Always", "CURRENT": "Current"},
-    "PLATZI": "Platzi is a recognized online education platform, where you will find courses on various topics of which I focus on web development",
-    "ITEC": "iTec is a tertiary education institute where he studied software development, but after 2 years of studying he decided to leave to be self-taught, since he noticed better progress with this modality",
-    "GOOGLE": "On these platforms I stay up to date on the world of technology, and like every developer I also look for information quickly when I find myself solving problems."
+    "PLATZI": "Platzi is a recognized online education platform, where you will find courses on various topics of which I focus on web development.",
+    "ITEC": "iTec is a tertiary education institute where I studied software development, but after 2 years of studying I decided to leave to be self-taught, since I noticed better progress with this modality.",
+    "GOOGLE": "On these platforms I stay up to date on the world of technology, and like every developer I also quickly search for information when I find myself solving a problem."
   },
   "TALK-TO-ME": {
     "TITLE": "Talk To Me",
