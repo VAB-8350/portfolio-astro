@@ -16,6 +16,13 @@ const i18n = getI18N(Astro.currentLocale)
 		<meta charset="UTF-8" />
 		<meta name="description" content={i18n.DESCRIPTION} />
 		<meta name="viewport" content="width=device-width" />
+
+		<!-- open graph -->
+		<meta property="og:title" content="Andres Barilin | Front-End Developer" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="/open-graph.jpg">
+		<meta property="og:url" content="https://www.victorbarilin.com"/>
+
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{i18n.TITLE || 'Victor Andres Barilin'}</title>
