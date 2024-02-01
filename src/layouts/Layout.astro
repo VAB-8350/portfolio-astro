@@ -19,9 +19,13 @@ const i18n = getI18N(Astro.currentLocale)
 
 		<!-- open graph -->
 		<meta property="og:title" content="Andres Barilin | Front-End Developer" />
-		<meta property="og:type" content="article" />
-		<meta property="og:image" content="/open-graph.jpg">
+		<meta property="og:description" content={i18n.DESCRIPTION}>
 		<meta property="og:url" content="https://www.victorbarilin.com"/>
+		<meta property="og:site_name" content="Andres Barilin | Front-End Developer">
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://www.victorbarilin.com/open-graph.jpg">
+		<meta property="og:image:width" content="3840">
+		<meta property="og:image:height" content="2880">
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
