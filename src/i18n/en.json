@@ -1,5 +1,5 @@
 {
-  "TITLE": "Victor Andres Barilin",
+  "TITLE": "Andres - Front-End",
   "DESCRIPTION": "My professional portfolio, I am a front-end oriented software developer",
   "NAME": "Andres Barilin",
   "SHORT-DESCRIPTION": "I am not a Bot, I am a Software Developer specialized in Front-end, I love working as a team developing incredible interfaces.",
@@ -42,9 +42,9 @@
   "EDUCATION": {
     "TITLE": "EDUCATION",
     "STATES": {"ALWAYS": "Always", "CURRENT": "Current"},
-    "PLATZI": "Platzi is an online education platform, where you will find courses on various topics of which I focus on web development",
-    "ITEC": "iTec is a tertiary education institute where I studied software development",
-    "GOOGLE": "On these platforms I stay up to date on the world of technology, and I also quickly search for information when I find myself solving problems."
+    "PLATZI": "Platzi is a recognized online education platform, where you will find courses on various topics of which I focus on web development",
+    "ITEC": "iTec is a tertiary education institute where he studied software development, but after 2 years of studying he decided to leave to be self-taught, since he noticed better progress with this modality",
+    "GOOGLE": "On these platforms I stay up to date on the world of technology, and like every developer I also look for information quickly when I find myself solving problems."
   },
   "TALK-TO-ME": {
     "TITLE": "Talk To Me",

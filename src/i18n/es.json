@@ -1,9 +1,9 @@
 {
-  "TITLE": "Victor Andres Barilin",
+  "TITLE": "Andres - Front-End",
   "DESCRIPTION": "Mi portafolio profesional, soy un desarrollador de software orientado al front-end",
   "NAME": "Andres Barilin",
   "JOB": "Front-End",
-  "SHORT-DESCRIPTION": "No soy un Bot, soy un Software Developer especializado en Front-end, Me encanta trabajar en equipo desarrollando interfaces increibles.",
+  "SHORT-DESCRIPTION": "No soy un Bot, soy un Software Developer especializado en Front-end, Me encanta trabajar en equipo desarrollando interfaces increíbles.",
   "DOWNLOAD-CV": "Descargar CV",
   "VIEW-CV": "Ver CV",
   "HEADER": {
@@ -18,17 +18,17 @@
   "ABOUT-ME": {
     "TITLE": "Sobre Mi",
     "FIRST-P": "Después de encontrarme con el gigantesco mundo del desarrollo de software, decidí centrarme en el desarrollo web, con sed de aprender y mejorar constantemente para ofrecer soluciones más robustas y confiables.",
-    "SECOND-P": "Me gusta poder compartir ideas con el equipo y aprender de sus experiencias, conseguir los mejores resultado posibles comprometiéndonos con el proyecto y el cliente.",
-    "THIRD-P": "Actualmente trabajo en Devias como Desarrollador Front-end mayormente abocado a “buckedup.com”, un e-commerce establecido en Estados Unidos, desde hace aproximadamente dos años y a eso agrego mi experiencia en ArboT, (empresa de robótica)."
+    "SECOND-P": "Me gusta poder compartir ideas con el equipo y aprender de sus experiencias, conseguir los mejores resultados posibles comprometiéndonos con el proyecto y el cliente.",
+    "THIRD-P": "Actualmente trabajo en Devias como Desarrollador Front-end mayormente abocado a “buckedup.com”, un e-commerce establecido en Estados Unidos, desde hace aproximadamente dos años y a eso agregado mi experiencia en ArboT, (empresa de robótica)."
   },
   "PROJECTS": {
     "TITLE": "Mis Trabajos",
-    "DESCRIPTION": "En esta seccion podra encontrar algunos de mis trabajo para conocer un poco mas sobre mi.",
-    "BUCKEDUP-DESCRIPTION":  "Estes es  mi trabajo actual, se trata de un e-commerce de una empresa de estados unidos, en la cual trabajaba como desarrollador frontend.",
+    "DESCRIPTION": "En esta sección podrás encontrar algunos de mis trabajos para conocer un poco más sobre mí.",
+    "BUCKEDUP-DESCRIPTION":  "Este es mi trabajo actual, se trata de un e-commerce de una empresa de estados unidos, en la cual trabajaba como desarrollador frontend.",
     "B-LARGE-DESCRIPTION": "B-Large es un “e-commerce” con productos de Amazon, y en este proyecto personal tuve la oportunidad de desarrollar tanto Front-end como Back-end."
   },
   "EXPERIENCE": {
-    "TITLE": "Experience",
+    "TITLE": "Experiencia",
     "ARBOT": [
       "En este puesto llevar a cabo trabajos más relacionados con la robótica, realizando tareas como montaje y diseños de placas electrónicas, diseño 3D y desarrollo de software.",
       "En este trabajo no tuve la oportunidad de utilizar muchas tecnologías web, pero él me dio la oportunidad de resolver varios desafíos de manera lógica.",
@@ -36,22 +36,22 @@
     ],
     "DEVIAS": [
       "Este fue mi primer trabajo orientado al desarrollo de software web, donde pude adquirir mucha experiencia apoyado por un buen equipo.",
-      "No solo hice desarrollo web, sino que también tuve la oportunidad de poder contribuir al desarrollo de una aplicación para teléfono, utilizando React Native."
+      "No solo hice desarrollo web, sino que también tuve la oportunidad de poder contribuir al desarrollo de una aplicación para dispositivos móviles, utilizando React Native."
     ]
   },
   "EDUCATION": {
     "TITLE": "EDUCACIÓN",
     "STATES": {"ALWAYS": "Siempre", "CURRENT": "Actualmente"},
-    "PLATZI": "Platzi es una plataforma de educación online, donde encontrarás cursos de diversos temas de los cuales yo me enfoque en desarrollo web",
-    "ITEC": "iTec es un instituto de educacion nivel terciario en el que estudiaba desarrollo de software",
-    "GOOGLE": "En estas plataformas me mantengo al dia sobre el mundo de la tacnologia, y tambien busco informacion rapidamente cuando me encuentro resolviendo problemas"
+    "PLATZI": "Platzi es una reconocida plataforma de educación online, donde encontrarás cursos de diversos temas de los cuales yo me enfoque en desarrollo web",
+    "ITEC": "iTec es un instituto de educación nivel terciario en el que estudiaba desarrollo de software, pero tras 2 años de cursado decidió abandonar para ser autodidacta, ya que notaba un mejor progreso con dicha modalidad",
+    "GOOGLE": "En estas plataformas me mantengo al día sobre el mundo de la tacnologia, y como todo desarrollador tambien busco informacion rapidamente cuando me encuentro resolviendo problemas"
   },
   "TALK-TO-ME": {
     "TITLE": "Háblame!",
     "TEXT": [
       "¡Hola! Si has llegado hasta aquí, es probable que tengamos algo interesante de qué hablar.",
       "Estoy siempre abierto a nuevas conexiones, ideas emocionantes y oportunidades de colaboración.",
-      "Si tienes un proyecto que despierta curiosidad o simplemente quieres charlar sobre el último gadget tecnológico o tu musica rock favorita, ¡estoy aquí! No dudes en enviar un mensaje y hagamos que las cosas sucedan.",
+      "Si tienes un proyecto que despierta curiosidad o simplemente quieres charlar sobre el último gadget tecnológico o tu música rock favorita, ¡estoy aquí! No dudes en enviar un mensaje y hagamos que las cosas sucedan.",
       "¡Hasta luego!"
     ],
     "INPUT-EMAIL": "Email",
