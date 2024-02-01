@@ -4,8 +4,7 @@
     "baseUrl": ".",
     "paths": {
       "@i18n/*": ["src/i18n/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"]
+      "@components/*": ["src/components/*"]
     }
   }
 }

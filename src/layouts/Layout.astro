@@ -7,10 +7,6 @@ import PlanetBackground from '@components/PlanetBackground.astro'
 import SocialMedia from '@components/SocialMedia.astro';
 import MicrosoftClarity from '@components/MicrosoftClarity.astro';
 
-interface Props {
-	title: string;
-}
-
 const i18n = getI18N(Astro.currentLocale)
 ---
 
@@ -26,7 +22,7 @@ const i18n = getI18N(Astro.currentLocale)
 		{import.meta.env.PROD && <MicrosoftClarity />}
 	</head>
 	<body class="bg-semi-white dark:bg-black overflow-x-hidden">
-		<Header client:load />
+		<Header />
 		<slot />
 		<Footer />
 		<PlanetBackground />
