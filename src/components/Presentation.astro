@@ -35,7 +35,7 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="relative md:static">
       <h1 class="relative font-['Geist Black'] text-center text-4xl font-black flex flex-col md:flex-row md:gap-3 text-black dark:text-white mb-9">
         {i18n.NAME} <span id="title-job" class="text-[#FA00FF]">{i18n.JOB}</span>
-        <span class="absolute  inline-block bg-secondary-dark-text h-[1px] w-[75%] -left-10 sm:-left-[100%] sm:w-[800px] -bottom-[10px]" id="text-line"/>
+        <span class="absolute  inline-block bg-secondary-dark-text h-[1px] w-[75%] -left-10 md:-left-[100%] md:w-[800px] -bottom-[10px]" id="text-line"/>
       </h1>
 
       <p class="text-pretty text-black dark:text-white text-center md:text-start text-sm">
@@ -43,17 +43,17 @@ const i18n = getI18N(Astro.currentLocale)
       </p>
 
       <!-- lines -->
-      <span class="absolute -z-10 inline-block sm:hidden bg-secondary-dark-text h-[1px] w-[80%] -bottom-[30px] left-0" id="group-first"/>
-      <span class="absolute -z-10 inline-block sm:hidden bg-hover-dark dark:bg-white h-[1px] w-[120px] -bottom-[60px] -left-10" id="group-second"/>
-      <span class="absolute -z-10 inline-block sm:hidden bg-secondary-dark-text h-[1px] w-[150px] -bottom-[60px] left-[100px]" id="group-three"/>
-      <span class="absolute -z-10 inline-block sm:hidden bg-secondary-dark-text h-[1px] w-[58%] -bottom-[100px] -left-20" id="group-four"/>
-      <span class="absolute -z-10 inline-block sm:hidden bg-secondary-dark-text h-[1px] w-[58%] -bottom-[100px] -right-20" id="group-five"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[80%] -bottom-[30px] left-0" id="group-first"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-hover-dark dark:bg-white h-[1px] w-[120px] -bottom-[60px] -left-10" id="group-second"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[150px] -bottom-[60px] left-[100px]" id="group-three"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[58%] -bottom-[100px] -left-20" id="group-four"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[58%] -bottom-[100px] -right-20" id="group-five"/>
     </div>
 
     <!-- links -->
-    <div class="flex flex-col gap-3 mt-auto md:mt-1 w-full sm:w-auto">
+    <div class="flex flex-col gap-3 mt-auto md:mt-1 w-full md:w-auto pb-5 md:pb-0">
       <!-- email -->
-      <div class="order-4 md:order-1 flex gap-2 justify-center md:justify-start sm:order-1">
+      <div class="order-4 md:order-1 flex gap-2 justify-center md:justify-start md:order-1">
 
         <button id="copy-btn" class="active:scale-110 relative after:content-['Copied'] after:font-semibold after:bg-white after:dark:bg-semi-black after:text-green-500 after:absolute after:left-[-10px] after:translate-x-[-100%] after:top-[-50%] after:border after:border-outline-light after:dark:border-outline-dark after:p-2 after:rounded-md after:hidden duration-200 disabled:cursor-not-allowed" aria-label="Copy Email">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy stroke-secondary-light-text dark:stroke-secondary-dark-text active:stroke-green-500 duration-300" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
@@ -66,9 +66,9 @@ const i18n = getI18N(Astro.currentLocale)
       </div>
 
       <div class="flex flex-col gap-3 md:flex-row order-2 md:mt-5">
-        <a href="/pdf/CV-Andres_Barilin.pdf" target='_blank' download='CV-Andres_Barilin.pdf' class="w-full sm:w-auto bg-black dark:bg-white rounded-3xl font-['Geist'] text-md text-white dark:text-black shadow-md dark:shadow-none py-2 px-5 order-2 md:dark:shadow-[0px_0px_79.7px_0px_rgba(255,255,255,0.50)] hover:dark:bg-secondary-dark-text hover:bg-neutral-700 hover:shadow-none duration-300">{i18n['DOWNLOAD-CV']}</a>
+        <a href="/pdf/CV-Andres_Barilin.pdf" target='_blank' download='CV-Andres_Barilin.pdf' class="w-full md:w-auto bg-black dark:bg-white rounded-3xl font-['Geist'] text-md text-white dark:text-black shadow-md dark:shadow-none py-2 px-5 order-2 md:dark:shadow-[0px_0px_79.7px_0px_rgba(255,255,255,0.50)] hover:dark:bg-secondary-dark-text hover:bg-neutral-700 hover:shadow-none duration-300 text-center">{i18n['DOWNLOAD-CV']}</a>
 
-        <a href='https://www.canva.com/design/DAFlvrITxu4/t6VpzTYhomtP0s4f8IWotA/view?utm_content=DAFlvrITxu4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink' target='_blanck' class="w-full px-5 sm:w-auto  bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 order-3 hover:text-black hover:dark:text-white  hover:bg-hover-light hover:dark:bg-hover-dark duration-300 hover:dark:border-transparent">{i18n['VIEW-CV']}</a>
+        <a href='https://www.canva.com/design/DAFlvrITxu4/t6VpzTYhomtP0s4f8IWotA/view?utm_content=DAFlvrITxu4&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink' target='_blanck' class="w-full px-5 md:w-auto  bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 order-3 hover:text-black hover:dark:text-white  hover:bg-hover-light hover:dark:bg-hover-dark duration-300 hover:dark:border-transparent text-center">{i18n['VIEW-CV']}</a>
       </div>
     </div>
   </section>
@@ -77,11 +77,11 @@ const i18n = getI18N(Astro.currentLocale)
   <span class="absolute inline-block bg-secondary-dark-text h-[1px] w-[75%] top-4 md:top-20 right-0" id="top-line" />
   <span class="absolute inline-block bg-hover-dark dark:bg-white h-[1px] w-[20%] top-16 md:top-36 right-0"/>
 
-  <span class="hidden absolute -z-10 sm:inline-block bg-secondary-dark-text h-[1px] w-[825px] bottom-[120px] left-[160px]" id="group-first-desktop"/>
-  <span class="hidden absolute -z-10 sm:inline-block bg-hover-dark dark:bg-white h-[1px] w-[246px] bottom-[60px] left-[100px]" id="group-second-desktop"/>
-  <span class="hidden absolute -z-10 sm:inline-block bg-secondary-dark-text h-[1px] w-[473px] bottom-[60px] left-[376px] origin-right" id="group-three-desktop"/>
-  <span class="hidden absolute -z-10 sm:inline-block bg-secondary-dark-text h-[1px] w-[600px] bottom-[0px] left-[40px]"/>
-  <span class="hidden absolute -z-10 sm:inline-block bg-secondary-dark-text h-[1px] w-[570px] bottom-[0px] left-[670px]"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[825px] bottom-[120px] left-[160px]" id="group-first-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-hover-dark dark:bg-white h-[1px] w-[246px] bottom-[60px] left-[100px]" id="group-second-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[473px] bottom-[60px] left-[376px] origin-right" id="group-three-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[600px] bottom-[0px] left-[40px]"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[570px] bottom-[0px] left-[670px]"/>
 </section>
 
 <style>
