@@ -35,7 +35,7 @@ const i18n = getI18N(Astro.currentLocale)
           <textarea required class="max-h-[217px] min-h-[217px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text p-3" name="message" id="message" cols="30" rows="10"></textarea>
         </div>
 
-        <button class="h-[40px] w-full md:w-fit rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-light-text dark:text-secondary-dark-text px-10 hover:bg-hover-light hover:dark:bg-hover-dark duration-300 flex gap-3 items-center disabled:cursor-not-allowed" type="submit" id="submit-btn">
+        <button class="shadow-sm h-[40px] w-full md:w-fit rounded-md bg-semi-white dark:bg-semi-black border border-dashed border-outline-light dark:border-outline-dark outline-none text-secondary-light-text dark:text-secondary-dark-text px-10 hover:bg-hover-light hover:dark:bg-hover-dark duration-300 flex gap-3 items-center disabled:cursor-not-allowed" type="submit" id="submit-btn">
           {i18n['TALK-TO-ME']['SEND-BTN']}
 
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-loader-2 animate-spin stroke-white hidden" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" id="spin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 20.777a8.942 8.942 0 0 1 -2.48 -.969" /><path d="M14 3.223a9.003 9.003 0 0 1 0 17.554" /><path d="M4.579 17.093a8.961 8.961 0 0 1 -1.227 -2.592" /><path d="M3.124 10.5c.16 -.95 .468 -1.85 .9 -2.675l.169 -.305" /><path d="M6.907 4.579a8.954 8.954 0 0 1 3.093 -1.356" /></svg>

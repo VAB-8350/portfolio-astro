@@ -35,7 +35,7 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="relative md:static">
       <h1 class="relative font-['Geist Black'] text-center text-4xl font-black flex flex-col md:flex-row md:gap-3 text-black dark:text-white mb-9">
         {i18n.NAME} <span id="title-job" class="text-[#FA00FF]">{i18n.JOB}</span>
-        <span class="absolute  inline-block bg-secondary-dark-text h-[1px] w-[75%] -left-10 md:-left-[100%] md:w-[800px] -bottom-[10px]" id="text-line"/>
+        <span class="absolute  inline-block border-secondary-dark-text border border-dashed h-0 w-[75%] -left-10 md:-left-[100%] md:w-[800px] -bottom-[10px]" id="text-line"/>
       </h1>
 
       <p class="text-pretty text-black dark:text-white text-center md:text-start text-sm">
@@ -75,10 +75,10 @@ const i18n = getI18N(Astro.currentLocale)
 
   <!-- lines -->
   <span class="absolute inline-block bg-secondary-dark-text h-[1px] w-[75%] top-4 md:top-20 right-0" id="top-line" />
-  <span class="absolute inline-block bg-hover-dark dark:bg-white h-[1px] w-[20%] top-16 md:top-36 right-0"/>
+  <span class="absolute inline-block border-hover-dark dark:border-white border border-dashed h-0 w-[20%] top-16 md:top-36 right-0"/>
 
   <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[825px] bottom-[120px] left-[160px]" id="group-first-desktop"/>
-  <span class="hidden absolute -z-10 md:inline-block bg-hover-dark dark:bg-white h-[1px] w-[246px] bottom-[60px] left-[100px]" id="group-second-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block border-hover-dark dark:border-white border-b border-dashed h-0 w-[246px] bottom-[60px] left-[100px]" id="group-second-desktop"/>
   <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[473px] bottom-[60px] left-[376px] origin-right" id="group-three-desktop"/>
   <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[600px] bottom-[0px] left-[40px]"/>
   <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[570px] bottom-[0px] left-[670px]"/>
@@ -104,6 +104,7 @@ const i18n = getI18N(Astro.currentLocale)
   @media (min-width: 768px) {
     #text-line {
       animation: text-line-desktop 20s linear infinite alternate;
+      background-color: rerepeating-linear-gradient(90deg, #666, #666 2px,transparent 2px,transparent 4px);
     }
     #group-first-desktop {
       animation: group-first-line-desktop 6s ease-in-out infinite alternate;
