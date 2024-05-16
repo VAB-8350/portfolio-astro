@@ -35,7 +35,7 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="relative md:static">
       <h1 class="relative font-['Geist Black'] text-center text-4xl font-black flex flex-col md:flex-row md:gap-3 text-black dark:text-white mb-9">
         {i18n.NAME} <span id="title-job" class="text-[#FA00FF]">{i18n.JOB}</span>
-        <span class="absolute  inline-block border-secondary-dark-text border border-dashed h-0 w-[75%] -left-10 md:-left-[100%] md:w-[800px] -bottom-[10px]" id="text-line"/>
+        <span class="absolute inline-block h-[1px] w-[75%] -left-10 md:-left-[100%] md:w-[800px] -bottom-[10px] gradient-line-right" id="text-line"/>
       </h1>
 
       <p class="text-pretty text-black dark:text-white text-center md:text-start text-sm">
@@ -43,9 +43,9 @@ const i18n = getI18N(Astro.currentLocale)
       </p>
 
       <!-- lines -->
-      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[80%] -bottom-[30px] left-0" id="group-first"/>
-      <span class="absolute -z-10 inline-block md:hidden bg-hover-dark dark:bg-white h-[1px] w-[120px] -bottom-[60px] -left-10" id="group-second"/>
-      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[150px] -bottom-[60px] left-[100px]" id="group-three"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[80%] -bottom-[30px] left-0 gradient-line-left gradient-line-right" id="group-first"/>
+      <span class="absolute -z-10 inline-block md:hidden h-[1px] w-[120px] -bottom-[60px] -left-10 gradient-line-left" id="group-second"/>
+      <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[150px] -bottom-[60px] left-[100px] gradient-line-right" id="group-three"/>
       <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[58%] -bottom-[100px] -left-20" id="group-four"/>
       <span class="absolute -z-10 inline-block md:hidden bg-secondary-dark-text h-[1px] w-[58%] -bottom-[100px] -right-20" id="group-five"/>
     </div>
@@ -74,14 +74,14 @@ const i18n = getI18N(Astro.currentLocale)
   </section>
 
   <!-- lines -->
-  <span class="absolute inline-block bg-secondary-dark-text h-[1px] w-[75%] top-4 md:top-20 right-0" id="top-line" />
-  <span class="absolute inline-block border-hover-dark dark:border-white border border-dashed h-0 w-[20%] top-16 md:top-36 right-0"/>
+  <span class="absolute inline-block h-[1px] w-[75%] top-4 md:top-20 right-0 gradient-line-left gradient-line-right" id="top-line" />
+  <span class="absolute inline-block h-[1px] w-[20%] top-16 md:top-36 right-0 gradient-line-right" id="second-top-line"/>
 
-  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[825px] bottom-[120px] left-[160px]" id="group-first-desktop"/>
-  <span class="hidden absolute -z-10 md:inline-block border-hover-dark dark:border-white border-b border-dashed h-0 w-[246px] bottom-[60px] left-[100px]" id="group-second-desktop"/>
-  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[473px] bottom-[60px] left-[376px] origin-right" id="group-three-desktop"/>
-  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[600px] bottom-[0px] left-[40px]"/>
-  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[570px] bottom-[0px] left-[670px]"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[825px] bottom-[120px] left-[160px] gradient-line-left gradient-line-right" id="group-first-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block h-[1px] w-[246px] bottom-[60px] left-[100px] gradient-line-left" id="group-second-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[473px] bottom-[60px] left-[376px] origin-right gradient-line-right" id="group-three-desktop"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[600px] bottom-[0px] left-[40px] gradient-line-left"/>
+  <span class="hidden absolute -z-10 md:inline-block bg-secondary-dark-text h-[1px] w-[570px] bottom-[0px] left-[670px] gradient-line-right"/>
 </section>
 
 <style>
@@ -91,6 +91,51 @@ const i18n = getI18N(Astro.currentLocale)
       height: calc(100dvh - 70px);
     }
   }
+
+  .gradient-line-left, .gradient-line-right {
+    &::before, &::after {
+      content: "";
+      height: 100%;
+      width: 300px;
+      position: absolute;
+    }
+
+    @media (max-width: 768px) {
+      &::before, &::after{
+        width: 100px;
+      }
+    }
+  }
+
+  .gradient-line-left {
+    &::before {
+      background: linear-gradient(to left, transparent, #FAFAFA);
+      left: -1px;
+    }
+  }
+
+  .gradient-line-right {
+    &::after {
+      background: linear-gradient(to right, transparent, #FAFAFA);
+      right: -1px;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .gradient-line-left::before {
+      background: linear-gradient(to left, transparent, #000);
+    }
+    .gradient-line-right::after {
+      background: linear-gradient(to right, transparent, #000);
+    }
+  }
+  #second-top-line {
+    background: repeating-linear-gradient(90deg, #000, #000 10px, transparent 0px, transparent 14px);
+    @media (prefers-color-scheme: dark) {
+      background: repeating-linear-gradient(90deg, #fff, #fff 10px, transparent 0px, transparent 14px);
+    }
+  }
+
   #title-job {
     text-shadow: 0px 0px 100px #FA00FF;
   }
@@ -98,13 +143,29 @@ const i18n = getI18N(Astro.currentLocale)
   /* animations */
   #top-line {
     animation: top-line 10s ease-in-out infinite alternate;
+    background: repeating-linear-gradient(90deg, #666666, #666666 10px, transparent 0px, transparent 14px);
+
+    @media (prefers-color-scheme: dark) {
+      background: repeating-linear-gradient(90deg, #A1A1A1, #A1A1A1 10px, transparent 0px, transparent 14px);
+    }
+  }
+
+  #text-line {
+    background: repeating-linear-gradient(90deg, #000, #000 10px, transparent 0px, transparent 14px);
+    @media (prefers-color-scheme: dark) {
+      background: repeating-linear-gradient(90deg, #fff, #fff 10px, transparent 0px, transparent 14px);
+    }
   }
 
   /* desktop animations */
   @media (min-width: 768px) {
     #text-line {
       animation: text-line-desktop 20s linear infinite alternate;
-      background-color: rerepeating-linear-gradient(90deg, #666, #666 2px,transparent 2px,transparent 4px);
+      background: repeating-linear-gradient(90deg, #000, #000 10px, transparent 0px, transparent 14px);
+
+      @media (prefers-color-scheme: dark) {
+        background: repeating-linear-gradient(90deg, #fff, #fff 10px, transparent 0px, transparent 14px);
+      }
     }
     #group-first-desktop {
       animation: group-first-line-desktop 6s ease-in-out infinite alternate;
@@ -112,6 +173,11 @@ const i18n = getI18N(Astro.currentLocale)
 
     #group-second-desktop {
       animation: group-second-line-desktop 7s ease-in-out infinite alternate;
+      background: repeating-linear-gradient(90deg, #000, #000 10px, transparent 0px, transparent 14px);
+
+      @media (prefers-color-scheme: dark) {
+        background: repeating-linear-gradient(90deg, #fff, #fff 10px, transparent 0px, transparent 14px);
+      }
     }
 
     #group-three-desktop {
@@ -124,12 +190,18 @@ const i18n = getI18N(Astro.currentLocale)
     #text-line {
       animation: top-line 20s linear infinite alternate;
     }
+
     #group-first {
       animation: group-first-line 8s ease-in-out 2s infinite alternate;
     }
 
     #group-second {
       animation: group-second-line 7s ease-in-out infinite alternate;
+      background: repeating-linear-gradient(90deg, #000, #000 10px, transparent 0px, transparent 14px);
+
+      @media (prefers-color-scheme: dark) {
+        background: repeating-linear-gradient(90deg, #fff, #fff 10px, transparent 0px, transparent 14px);
+      }
     }
 
     #group-three {
