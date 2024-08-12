@@ -74,29 +74,42 @@ const i18n = getI18N(Astro.currentLocale)
 
 
     const formData = new FormData(this)
-    const response = await fetch(e.target.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-          'Accept': 'application/json'
+
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+    const email = formData.get('email')
+    const message = formData.get('message')
+    
+    const isValid = emailRegex.test(email) && message.length > 0
+    
+    if (isValid) {
+      const response = await fetch(e.target.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+      })
+  
+      spin.classList.add('hidden')
+      btn.removeAttribute('disabled')
+  
+      if (response.ok) {
+        form.reset()
+        const success = document.querySelector('#success')
+        success.classList.remove('hidden')
+        setTimeout(() => {success.classList.add('hidden')}, 3000)
+  
+      } else {
+        const error = document.querySelector('#error')
+        error.classList.remove('hidden')
+        setTimeout(() => {error.classList.add('hidden')}, 3000)
       }
-    })
-
-    spin.classList.add('hidden')
-    btn.removeAttribute('disabled')
-
-    if (response.ok) {
-      form.reset()
-      const success = document.querySelector('#success')
-      success.classList.remove('hidden')
-      setTimeout(() => {success.classList.add('hidden')}, 3000)
-
     } else {
       const error = document.querySelector('#error')
       error.classList.remove('hidden')
       setTimeout(() => {error.classList.add('hidden')}, 3000)
     }
-
 
     btn.removeAttribute('disabled')
   }
