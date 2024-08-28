@@ -25,7 +25,8 @@
     "TITLE": "My Works",
     "DESCRIPTION": "In this section you can find some of my work to learn a little more about me.",
     "BUCKEDUP-DESCRIPTION": "This is my current job, it is the e-commerce for a company in the United States, where I worked as a frontend developer.",
-    "B-LARGE-DESCRIPTION": "B-Large is an “e-commerce” with Amazon products, and in this personal project I had the opportunity to develop both Front-end and Back-end."
+    "B-LARGE-DESCRIPTION": "B-Large is an “e-commerce” with Amazon products, and in this personal project I had the opportunity to develop both Front-end and Back-end.",
+    "BLOG-DDV-DESCRIPTION": "This is a personal project, a blog called 'Detras del Volante', where you can find content related to the automotive world. In this project, I was responsible for developing both the front-end and the back-end."
   },
   "EXPERIENCE": {
     "TITLE": "Experience",

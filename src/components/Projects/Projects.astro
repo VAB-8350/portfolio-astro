@@ -22,6 +22,15 @@ const i18n = getI18N(Astro.currentLocale)
     />
 
     <Card
+      title='Blog DDV'
+      description={i18n.PROJECTS['BLOG-DDV-DESCRIPTION']}
+      image='/blog-ddv.png'
+      logo='/logo-ddv.png'
+      tech={['Next.js', 'JavaScript', 'Tailwind', 'MongoDB']}
+      link='https://blogddv.com'
+    />
+
+    <Card
       title='B-Large'
       description={i18n.PROJECTS['B-LARGE-DESCRIPTION']}
       image='/b-large.png'
@@ -29,14 +38,5 @@ const i18n = getI18N(Astro.currentLocale)
       tech={['Next.js', 'JavaScript', 'SASS', 'TypeScript', 'MongoDB', 'Puppeter']}
       link='https://b-large.com'
     />
-
-    <!-- <Card
-      title='Bucked Up'
-      description='Estes es  mi trabajo actual, se trata de un e-commerce de una empresa de estados unidos, en la cual trabajaba como desarrollador frontend'
-      image='/buckedup.png'
-      logo='/buckedup-logo.png'
-      tech={['React.js', 'JavaScript', 'LESS', 'Typescript']}
-      link='https://buckedup.com'
-    /> -->
   </div>
 </section>
