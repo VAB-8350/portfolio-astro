@@ -5,10 +5,10 @@ import { getI18N } from '@i18n/index'
 const i18n = getI18N(Astro.currentLocale)
 ---
 
-<section class="pt-16 px-5" id="project">
+<section class="pt-20 lg:pt-[150px] px-5" id="project">
   <div class="flex flex-col gap-1 items-center">
     <h2 class="text-black dark:text-white font-['Geist Bold'] font-bold text-3xl text-center">{i18n.PROJECTS.TITLE}</h2>
-    <p class="text-secondary-light-text dark:text-secondary-dark-text text-center max-w-[600px] text-pretty text-sm">{i18n.PROJECTS.DESCRIPTION}</p>
+    <p class="text-secondary-light-text dark:text-secondary-dark-text text-center text-pretty text-lg">{i18n.PROJECTS.DESCRIPTION}</p>
   </div>
 
   <div class="flex justify-center items-center md:items-stretch flex-col md:flex-row gap-5 mt-11 md:mt-14 mb-8">

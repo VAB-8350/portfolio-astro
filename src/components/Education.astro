@@ -3,17 +3,17 @@ import { getI18N } from '@i18n/index'
 const i18n = getI18N(Astro.currentLocale)
 ---
 
-<section class="max-w-[90%] md:max-w-[1100px] mb-14 md:mb-24 mx-auto">
-  <h2 class="text-5xl font-extrabold py-3 md:text-8xl md:font-normal md:h-24 w-full md:w-[70%] dark:text-black text-white">{i18n.EDUCATION.TITLE}</h2>
+<section class="max-w-[90%] md:max-w-[1100px] lg:mb-[200px] mb-24 mx-auto">
+  <h2 class="text-5xl font-extrabold py-3 lg:pb-[25px] md:text-8xl md:font-normal md:h-24 w-full md:w-[70%] dark:text-black text-white">{i18n.EDUCATION.TITLE}</h2>
 
 
-  <section class="mt-6 md:mt-16">
+  <section class="mt-6 md:mt-[100px]">
 
     <!-- itec & platzi -->
-    <div class="flex flex-col md:flex-row w-full justify-between md:px-9 gap-5 mb-5 md:gap-0 md:mb-0">
+    <div class="flex flex-col md:flex-row w-full justify-between md:px-9 gap-7 mb-7 md:gap-0 md:mb-0">
       <div class="md:w-[45%] h-auto flex flex-col md:items-center justify-between">
 
-        <article class="md:max-w-[90%]">
+        <article class="md:max-w-[90%] lg:mb-3">
           <div class="flex items-end gap-5 md:justify-normal justify-between">
             <div class="flex gap-3">
               <img loading="lazy" class="object-contain h-6 md:h-9" src="/itec.png" alt="iTec">
@@ -23,7 +23,7 @@ const i18n = getI18N(Astro.currentLocale)
             <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">2020 - 2021</span>
           </div>
 
-          <p class="text-sm text-secondary-light-text dark:text-secondary-dark-text md:mt-3 text-pretty">
+          <p class="text-base text-secondary-light-text dark:text-secondary-dark-text md:mt-3 text-pretty">
             {i18n.EDUCATION.ITEC}
           </p>
 
@@ -39,7 +39,7 @@ const i18n = getI18N(Astro.currentLocale)
 
       <div class="md:w-[45%] h-auto flex flex-col md:items-center justify-between">
 
-        <article class="md:max-w-[90%]">
+        <article class="md:max-w-[90%] lg:mb-3">
           <div class="flex items-end gap-5 md:justify-normal justify-between">
             <div class="flex gap-3">
               <img loading="lazy" class="object-contain h-6 md:h-9" src="/platzi.png" alt="Platzi">
@@ -49,7 +49,7 @@ const i18n = getI18N(Astro.currentLocale)
             <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">2022 - {i18n.EDUCATION.STATES.CURRENT}</span>
           </div>
 
-          <p class="text-sm text-secondary-light-text dark:text-secondary-dark-text md:mt-3 text-pretty">
+          <p class="text-base text-secondary-light-text dark:text-secondary-dark-text md:mt-3 text-pretty">
             {i18n.EDUCATION.PLATZI}
           </p>
 
@@ -68,6 +68,7 @@ const i18n = getI18N(Astro.currentLocale)
     <div class="relative my-8 w-full h-[6px] bg-secondary-light-text dark:bg-secondary-dark-text line mx-auto hidden md:block">
       <span class="absolute left-[-15px] top-[-12px] inline-block w-[30px] h-[30px] bg-secondary-light-text  dark:bg-secondary-dark-text rounded-full"/>
       <span class="absolute right-[-15px] top-[-12px] inline-block w-[0px] h-[0px] triangle"/>
+      <span class="line-body"/>
     </div>
 
     <!-- google & youtube -->
@@ -91,7 +92,7 @@ const i18n = getI18N(Astro.currentLocale)
           <span class="text-secondary-light-text dark:text-secondary-dark-text font-bold text-base">{i18n.EDUCATION.STATES.ALWAYS}</span>
         </div>
 
-        <p class="text-sm text-secondary-light-text dark:text-secondary-dark-text md:mt-3 text-pretty">
+        <p class="text-base text-secondary-light-text dark:text-secondary-dark-text md:mt-3 text-pretty">
           {i18n.EDUCATION.GOOGLE}
         </p>
 
@@ -106,8 +107,40 @@ const i18n = getI18N(Astro.currentLocale)
 
   .line {
     width: calc(100% - 30px);
-    background: repeating-linear-gradient(90deg, #666, #666 2px,transparent 2px,transparent 4px);
+    background-color: transparent;
   }
+
+  .line-body {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .line-body::after {
+    background: repeating-linear-gradient(90deg, #666, #666 4px,transparent 2px,transparent 10px);
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: line 20s linear infinite;
+  }
+
+  @keyframes line {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
   .triangle {
     border-left: 30px solid #666666;
     border-top: 15px solid transparent;

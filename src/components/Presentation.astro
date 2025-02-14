@@ -23,7 +23,7 @@ const i18n = getI18N(Astro.currentLocale)
   }
 </script>
 
-<section id="presentation" class="flex flex-col md:flex-row items-center md:justify-center pt-8 md:pt-40 gap-5 md:gap-24 overflow-hidden relative md:pb-[200px]">
+<section id="presentation" class="flex flex-col md:flex-row items-center md:justify-center pt-8 md:pt-[200px] gap-5 md:gap-24 overflow-hidden relative md:pb-[200px]">
   <!-- image -->
   <picture class="w-[166px] md:w-[200px] md:order-1">
     <img src="/me.png" alt="Imagen de perfil" class="w-full rounded-full border border-secondary-dark-text shadow-2xl dark:shadow-[0px_0px_169.1px_0px_rgba(255,255,255,0.35);] object-cover">
@@ -38,7 +38,7 @@ const i18n = getI18N(Astro.currentLocale)
         <span class="absolute inline-block h-[1px] w-[75%] -left-10 md:-left-[100%] md:w-[800px] -bottom-[10px] gradient-line-right" id="text-line"/>
       </h1>
 
-      <p class="text-pretty text-black dark:text-white text-center md:text-start text-sm">
+      <p class="text-pretty text-black dark:text-white text-center md:text-start text-lg">
         {i18n['SHORT-DESCRIPTION']}
       </p>
 
@@ -53,25 +53,24 @@ const i18n = getI18N(Astro.currentLocale)
     <!-- links -->
     <div class="flex flex-col gap-3 mt-auto md:mt-1 w-full md:w-auto pb-5 md:pb-0">
       <!-- email -->
-      <div class="order-4 md:order-1 flex gap-2 justify-center md:justify-start">
+      <div class="order-4 md:order-1 flex gap-2 justify-center md:justify-start items-center mt-3">
 
         <button id="copy-btn" class="active:scale-110 relative after:content-['Copied'] after:font-semibold after:bg-white after:dark:bg-semi-black after:text-green-500 after:absolute after:left-[-10px] after:translate-x-[-100%] after:top-[-50%] after:border after:border-outline-light after:dark:border-outline-dark after:p-2 after:rounded-md after:hidden duration-200 disabled:cursor-not-allowed" aria-label="Copy Email">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy stroke-secondary-light-text dark:stroke-secondary-dark-text active:stroke-green-500 duration-300" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copy stroke-secondary-light-text dark:stroke-secondary-dark-text active:stroke-green-500 duration-300" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" /><path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" /></svg>
         </button>
 
-        <a href="mailto:contact@victorbarilin.com?subject=Portfolio%20Contact&body=I%20have%20seen%20your%20portfolio%20and%20I%20thought%20it%20was%20great%2C%0D%0A%0D%0AContinue%20the%20message%20%F0%9F%98%89..." class="flex gap-2 text-secondary-light-text dark:text-secondary-dark-text underline">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z" /><path d="M3 7l9 6l9 -6" /></svg>
+        <a href="mailto:contact@victorbarilin.com?subject=Portfolio%20Contact&body=I%20have%20seen%20your%20portfolio%20and%20I%20thought%20it%20was%20great%2C%0D%0A%0D%0AContinue%20the%20message%20%F0%9F%98%89..." class="flex gap-2 text-secondary-light-text dark:text-secondary-dark-text underline text-lg mb-1">
           contact@victorbarilin.com
         </a>
       </div>
 
       <div class="flex flex-col gap-3 md:flex-row order-2 md:mt-5">
-        <a href="/pdf/CV-Andres_Barilin.pdf" target='_blank' download='CV-Andres_Barilin.pdf' class="flex items-center justify-center w-full md:w-auto bg-black dark:bg-white rounded-3xl font-['Geist'] text-md text-white dark:text-black shadow-md dark:shadow-none py-2 px-5 order-2 md:dark:shadow-[0px_0px_79.7px_0px_rgba(255,255,255,0.50)] hover:dark:bg-secondary-dark-text hover:bg-neutral-700 hover:shadow-none duration-300 text-center">{i18n['DOWNLOAD-CV']}</a>
+        <a href="/pdf/CV-Andres_Barilin.pdf" target='_blank' download='CV-Andres_Barilin.pdf' class="flex items-center justify-center w-full md:w-auto bg-black dark:bg-secondary-dark-text rounded-3xl font-['Geist'] text-md text-white dark:text-black shadow-md dark:shadow-none py-2 px-5 order-2 hover:md:dark:shadow-[0px_0px_79.7px_0px_rgba(255,255,255,0.50)] hover:dark:bg-white hover:bg-neutral-700 hover:shadow-none duration-300 text-center">{i18n['DOWNLOAD-CV']}</a>
 
         <a
           href='https://docs.google.com/document/d/1UTchx-lVtL9o61U4Ts_PXmWW53zfWU_9weak8XMpwdQ/edit?usp=sharing'
           target='_blanck'
-          class="flex items-center justify-center w-full px-5 md:w-auto  bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 order-3 hover:text-black hover:dark:text-white  hover:bg-hover-light hover:dark:bg-hover-dark duration-300 hover:dark:border-transparent text-center">
+          class="flex items-center justify-center w-full px-5 md:w-auto  bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 order-3 hover:text-black hover:dark:text-white  hover:bg-hover-light hover:dark:bg-black/30 hover:dark:border-white duration-300 hover:dark:border-transparent text-center">
           {i18n['VIEW-CV']}
         </a>
       </div>

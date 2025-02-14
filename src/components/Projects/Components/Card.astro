@@ -22,13 +22,13 @@ const i18n = getI18N(Astro.currentLocale)
     </picture>
   </a>
 
-  <div class="flex flex-col gap-2 p-4 justify-between h-full">
+  <div class="flex flex-col gap-4 p-4 justify-between h-full">
     <div class="flex items-end gap-3">
       <img src={logo} alt={title} class='h-8 w-8'>
       <h3 class="text-xl font-['Geist Bold'] font-bold text-black dark:text-white">{title}</h3>
     </div>
 
-    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{description}</p>
+    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty text-base">{description}</p>
 
     <div class="flex flex-wrap gap-1 w-full mb-2">
       {
@@ -39,15 +39,15 @@ const i18n = getI18N(Astro.currentLocale)
     </div>
 
     <div class="mt-auto flex gap-2">
-      <a class="bg-black dark:bg-white rounded-3xl font-['Geist'] text-md text-white dark:text-black dark:shadow-none py-2 px-4 flex gap-2 w-fit duration-300 hover:bg-neutral-700 hover:dark:bg-secondary-dark-text" href={link} target='_blank'>
+      <a class="bg-black dark:bg-secondary-dark-text rounded-3xl font-['Geist'] text-md text-white dark:text-black dark:shadow-none py-2 px-4 flex gap-2 w-fit duration-300 hover:bg-neutral-700 hover:dark:bg-white items-center" href={link} target='_blank'>
         {i18n['LINK-SITE']}
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
       </a>
       {
         linkCode &&
-        <a class="bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 px-4 flex w-fit" href={linkCode} target="_blank">
+        <a class="bg-transparent rounded-3xl font-['Geist'] text-md bg-white dark:bg-transparent border border-outline-light dark:border-outline-dark text-secondary-light-text dark:text-secondary-dark-text shadow-md dark:shadow-none py-2 px-4 flex w-fit gap-2 items-center hover:dark:text-white hover:dark:border-white duration-300 hover:text-black hover:bg-hover-light hover:dark:bg-black/30" href={linkCode} target="_blank">
           GitHub
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
         </a>
       }
     </div>
