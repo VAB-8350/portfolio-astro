@@ -99,16 +99,34 @@ const i18n = getI18N(language)
 </section>
 
 <style>
+  h1 {
+    background: linear-gradient(45deg, #000, #999, #000, #999);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    h1 {
+      background: linear-gradient(45deg, #eee, #555, #fff, #000);
+    }
+  }
 
   h1 {
     filter: blur(10px);
     /* animation: eliminar-blur 1.3s ease-in-out forwards; */
-    background: linear-gradient(45deg, #eee, #555, #fff, #000);
     background-size: 300% 300%;
     -webkit-background-clip: text; /* Para navegadores WebKit (Chrome, Safari) */
     background-clip: text;
     color: transparent; /* Hace que el texto muestre el gradiente */
     animation: animar-fondo 8s ease infinite, eliminar-blur 1s ease-in-out forwards;
+  }
+
+  #shadow-title {
+    background: linear-gradient(45deg, #000, #999, #000, #999);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #shadow-title {
+      background: linear-gradient(45deg, #eee, #555, #fff, #000);
+    }
   }
 
   #shadow-title {
@@ -118,9 +136,9 @@ const i18n = getI18N(language)
     left: 0;
     background: linear-gradient(45deg, #ddd, #555, #fff, #000);
     background-size: 300% 300%;
-    -webkit-background-clip: text; /* Para navegadores WebKit (Chrome, Safari) */
+    -webkit-background-clip: text;
     background-clip: text;
-    color: transparent; /* Hace que el texto muestre el gradiente */
+    color: transparent;
     animation: animar-fondo 8s ease infinite, eliminar-blur 1s ease-in-out;
     opacity: .3;
   }
