@@ -1,68 +1,72 @@
 {
   "TITLE": "Victor Andres | Front-End",
-  "DESCRIPTION": "My professional portfolio, I am a front-end oriented software developer",
+  "DESCRIPTION": "Professional portfolio, I'm a front-end oriented software developer",
+  "TITLE-PRESENTATION": "Solid and scalable frontend",
   "NAME": "Andres Barilin",
-  "SHORT-DESCRIPTION": "I am not a Bot, I am a Software Developer specialized in Front-end, I love working as a team developing incredible interfaces.",
   "JOB": "Front-End",
+  "SHORT-DESCRIPTION": "I'm not another AI, I'm Andres Barilin, Front-End Specialist with +{years[03/01/2022]} years of experience. I focus on building fast, scalable, and high-quality web solutions",
   "DOWNLOAD-CV": "Download CV",
   "VIEW-CV": "View CV",
   "HEADER": {
     "EXPERIENCE": "Experience",
     "SKILLS": "Skills",
     "PROJECT": "Projects",
-    "ABOUT": "About Me",
-    "CONTACT": "Contact Me"
+    "ABOUT": "About me",
+    "CONTACT": "Contact"
   },
   "LINK-SITE": "Open Site",
   "SKILLS": "Some Skills",
   "ABOUT-ME": {
     "TITLE": "About Me",
-    "FIRST-P": "After encountering the gigantic world of software development, I decided to focus on web development, with a thirst to constantly learn and improve to offer more robust and reliable solutions.",
-    "SECOND-P": "I like being able to share ideas with the team and learn from their experiences, achieving the best possible results by committing to the project and the client.",
-    "THIRD-P": "I currently work at Devias as a Front-end Developer mostly focused on “buckedup.com”, an e-commerce established in the United States, for approximately tres years and to that I add my experience at ArboT, (robotics company)."
+    "PARAGRAPHS": [
+      "I specialize in building modern web experiences, focused on the user and optimized for performance.",
+      "Since I discovered web development, I've maintained a mindset of constant learning, always seeking new technologies and best practices to perfect every project I work on.",
+      "I enjoy collaborating in teams, sharing ideas, and transforming designs into solid, functional, and aesthetically pleasing interfaces.",
+      "Today I seek new challenges where I can contribute my knowledge, creativity, and passion for software development."
+    ]
   },
   "PROJECTS": {
-    "TITLE": "My Works",
-    "DESCRIPTION": "In this section you can find some of my work to learn a little more about me.",
-    "BUCKEDUP-DESCRIPTION": "This is my current job, it is the e-commerce for a company in the United States, where I worked as a frontend developer.",
-    "B-LARGE-DESCRIPTION": "B-Large is an “e-commerce” with Amazon products, and in this personal project I had the opportunity to develop both Front-end and Back-end.",
-    "BLOG-DDV-DESCRIPTION": "This is a personal project, a blog called 'Detras del Volante', where you can find content related to the automotive world. In this project, I was responsible for developing both the front-end and the back-end."
+    "TITLE": "My Work",
+    "DESCRIPTION": "In this section you can find some of my work to learn more about me.",
+    "BUCKEDUP-DESCRIPTION": "This is my current job: the e-commerce site for a US-based company where I work as a Front-end developer. Among my achievements I can mention implementing complex designs, as well as optimizing the site's SEO and performance, achieving better search engine rankings.",
+    "B-LARGE-DESCRIPTION": "B-Large is an e-commerce site for Amazon affiliate products. In this personal project, I developed both the Front-end and Back-end, including a control panel. One of the main challenges was keeping products updated, so I implemented a scraper that automatically retrieves data, achieving much more efficient management.",
+    "BLOG-DDV-DESCRIPTION": "This is a personal project, a blog called 'Behind the Wheel' where you can find content related to the automotive world. In this project, I was responsible for developing both the front-end and back-end, plus an admin panel to manage content."
   },
   "EXPERIENCE": {
     "TITLE": "Experience",
     "ARBOT": [
-      "In this position I carried out work more related to robotics, performing tasks such as assembly and designs of electronic boards, 3D design and software development.",
-      "While I didn't have the opportunity to use many web technologies, this job allowed me to solve several challenges logically.",
-      "It should be noted that currently this company no longer exists."
+      "In this position I carried out work more related to robotics, performing tasks such as assembly and design of electronic boards, 3D design, and software development.",
+      "Although I didn't have the opportunity to use many web technologies, this job allowed me to solve various challenges logically.",
+      "It should be noted that this company no longer exists."
     ],
     "DEVIAS": [
-      "This is my first job focused on web software development, where I was able to gain a lot of experience supported by a good team.",
-      "I have currently been working in this company for approximately 3 years.",
-      "Not only do I do web development, but I also had the opportunity to contribute to the development of a mobile application, using React Native."
+      "This is my first job focused on web software development, where I gained a lot of experience supported by a good team.",
+      "I'm currently working at this company for more than {years[03/01/2022]} years.",
+      "Not only do I do web development, but I also had the opportunity to contribute to the development of a mobile application using React Native."
     ]
   },
   "EDUCATION": {
     "TITLE": "EDUCATION",
-    "STATES": {"ALWAYS": "Always", "CURRENT": "Current"},
-    "PLATZI": "Platzi is a recognized online education platform, where you will find courses on various topics of which I focus on web development.",
-    "ITEC": "iTec is a tertiary education institute where I studied software development, but after 2 years of studying I decided to leave to be self-taught, since I noticed better progress with this modality.",
-    "GOOGLE": "On these platforms I stay up to date on the world of technology, and like every developer I also quickly search for information when I find myself solving a problem."
+    "STATES": {"ALWAYS": "Always", "CURRENT": "Currently"},
+    "PLATZI": "Platzi is a renowned online education platform where you'll find courses on various topics, with my focus being on web development.",
+    "ITEC": "iTec is a tertiary-level educational institute where I studied software development. After 2 years of study, I decided to leave to become self-taught, as I noticed better progress with that approach.",
+    "GOOGLE": "On these platforms I stay up to date with the world of technology, and like every developer, I also quickly search for information when solving problems."
   },
   "TALK-TO-ME": {
-    "TITLE": "Talk To Me",
+    "TITLE": "Talk to me!",
     "TEXT": [
       "Hello! If you've made it this far, we probably have something interesting to talk about.",
-      "I am always open to new connections, exciting ideas and opportunities for collaboration.",
-      "If you have a project that sparks curiosity or you just want to chat about the latest technological gadget or your favorite rock music, I'm here! Feel free to send a message and let's make things happen.",
+      "I'm always open to new connections, exciting ideas, and collaboration opportunities.",
+      "If you have a project that sparks curiosity or just want to chat about the latest tech gadget or your favorite rock music, I'm here! Feel free to send a message and let's make things happen.",
       "See you later!"
     ],
     "INPUT-EMAIL": "Email",
     "INPUT-MESSAGE": "How can I help you?",
-    "SEND-BTN": "Submit"
+    "SEND-BTN": "Send"
   },
   "FOOTER": {
     "LEFT": "Design inspired by Vercel...",
-    "RIGHT": "Project carried out with Astro and Tailwind",
+    "RIGHT": "Project made with Astro and Tailwind",
     "LINK-TEXT": "View code"
   }
 }

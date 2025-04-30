@@ -1,9 +1,10 @@
 {
   "TITLE": "Victor Andres | Front-End",
   "DESCRIPTION": "Portafolio profesional, soy un desarrollador de software orientado al front-end",
+  "TITLE-PRESENTATION": "Frontend sólido y escalable",
   "NAME": "Andres Barilin",
   "JOB": "Front-End",
-  "SHORT-DESCRIPTION": "No soy un Bot, soy un Software Developer especializado en Front-end, me encanta trabajar en equipo desarrollando interfaces increíbles.",
+  "SHORT-DESCRIPTION": "No soy otra IA, soy Andres Barilin, Especialista Front-End con +{years[03/01/2022]} años de experiencia. Me enfoco en construir soluciones web rápidas, escalables y de alta calidad",
   "DOWNLOAD-CV": "Descargar CV",
   "VIEW-CV": "Ver CV",
   "HEADER": {
@@ -17,16 +18,19 @@
   "SKILLS": "Algunas Habilidades",
   "ABOUT-ME": {
     "TITLE": "Sobre Mi",
-    "FIRST-P": "Después de encontrarme con el gigantesco mundo del desarrollo de software, decidí centrarme en el desarrollo web, con sed de aprender y mejorar constantemente para ofrecer soluciones más robustas y confiables.",
-    "SECOND-P": "Me gusta poder compartir ideas con el equipo y aprender de sus experiencias, conseguir los mejores resultados posibles comprometiéndonos con el proyecto y el cliente.",
-    "THIRD-P": "Actualmente trabajo en Devias como Desarrollador Front-end mayormente abocado a “buckedup.com”, un e-commerce establecido en Estados Unidos, desde hace aproximadamente tres años y a eso agrego mi experiencia en ArboT, (empresa de robótica)."
+    "PARAGRAPHS": [
+      "Me especializo en construir experiencias web modernas, enfocadas en el usuario y optimizadas para el rendimiento.",
+      "Desde que descubrí el desarrollo web, he mantenido una mentalidad de aprendizaje constante, siempre buscando nuevas tecnologías y mejores prácticas para perfeccionar cada proyecto en el que trabajo.",
+      "Disfruto colaborar en equipo, compartir ideas y transformar diseños en interfaces sólidas, funcionales y estéticamente atractivas.",
+      "Hoy busco nuevos desafíos donde pueda aportar mi conocimiento, creatividad y pasión por el desarrollo de software."
+    ]
   },
   "PROJECTS": {
     "TITLE": "Mis Trabajos",
     "DESCRIPTION": "En esta sección podrás encontrar algunos de mis trabajos para conocer un poco más sobre mí.",
-    "BUCKEDUP-DESCRIPTION":  "Este es mi trabajo actual, se trata del e-commerce de una empresa de estados unidos, en la cual trabajo como desarrollador frontend.",
-    "B-LARGE-DESCRIPTION": "B-Large es un “e-commerce” con productos de Amazon, y en este proyecto personal tuve la oportunidad de desarrollar tanto Front-end como Back-end.",
-    "BLOG-DDV-DESCRIPTION": "Este es un proyecto personal, un blog llamado 'Detras del Volante', donde puedes encontrar contenido relacionado con el mundo automotriz. En este proyecto, me encargué de desarrollar tanto el front-end como el back-end."
+    "BUCKEDUP-DESCRIPTION":  "Este es mi trabajo actual: el e-commerce de una empresa de Estados Unidos, donde me desempeño como desarrollador Front-end. Entre mis logros puedo mencionar la implementación de diseños complejos, así como la optimización del SEO y el rendimiento del sitio, logrando un mejor posicionamiento en los buscadores.",
+    "B-LARGE-DESCRIPTION": "B-Large es un e-commerce de productos afiliados de Amazon. En este proyecto personal desarrollé tanto el Front-end como el Back-end, incluyendo un panel de control. Uno de los principales desafíos fue mantener los productos actualizados, por lo que implementé un scraper que obtiene los datos automáticamente, logrando así una gestión mucho más eficiente.",
+    "BLOG-DDV-DESCRIPTION": "Este es un proyecto personal, un blog llamado 'Detras del Volante', donde puedes encontrar contenido relacionado con el mundo automotriz. En este proyecto, me encargué de desarrollar tanto el front-end como el back-end, ademas de un panel de administrador para gestionar el contenido."
   },
   "EXPERIENCE": {
     "TITLE": "Experiencia",
@@ -37,7 +41,7 @@
     ],
     "DEVIAS": [
       "Este es mi primer trabajo orientado al desarrollo de software web, donde pude adquirir mucha experiencia apoyado por un buen equipo.",
-      "Actualmente me encuentro trabajando en esta empresa desde hace aproximadamente 3 años.",
+      "Actualmente me encuentro trabajando en esta empresa desde hace mas de {years[03/01/2022]} años.",
       "No solo hago desarrollo web, sino que también tuve la oportunidad de poder contribuir al desarrollo de una aplicación para dispositivos móviles, utilizando React Native."
     ]
   },
@@ -45,7 +49,7 @@
     "TITLE": "EDUCACIÓN",
     "STATES": {"ALWAYS": "Siempre", "CURRENT": "Actualmente"},
     "PLATZI": "Platzi es una reconocida plataforma de educación online, donde encontrarás cursos de diversos temas de los cuales yo me enfoque en desarrollo web.",
-    "ITEC": "iTec es un instituto de educación nivel terciario en el que estudiaba desarrollo de software, pero tras 2 años de cursado decidí abandonar para ser autodidacta, ya que notaba un mejor progreso con dicha modalidad.",
+    "ITEC": "iTec es un instituto de educación nivel terciario en el que estudiaba desarrollo de software, tras 2 años de cursado decidí abandonar para ser autodidacta, ya que notaba un mejor progreso con dicha modalidad.",
     "GOOGLE": "En estas plataformas me mantengo al día sobre el mundo de la tecnología, y como todo desarrollador también busco información rápidamente cuando me encuentro resolviendo algún problema."
   },
   "TALK-TO-ME": {
