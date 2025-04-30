@@ -15,7 +15,7 @@ import { getI18N } from '@i18n/index'
 const i18n = getI18N(Astro.currentLocale)
 ---
 
-<article class="flex flex-col w-[360px] border border-outline-light dark:border-outline-dark rounded-[6px] relative bg-semi-white/70 dark:bg-black/50">
+<article class="flex flex-col max-w-[360px] border border-outline-light dark:border-outline-dark rounded-[6px] relative bg-semi-white/70 dark:bg-black/50">
   <a href={link} target='_blank' class='transition-opacity duration-200 hover:opacity-55'>
     <picture class="inline-block w-full">
       <img class="rounded-t-md w-full max-h-[182px] object-cover border-b border-outline-light dark:border-outline-dark" src={image} alt={title}>
