@@ -58,11 +58,20 @@ const i18n = getI18N(Astro.currentLocale)
 
 <style>
   #light {
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(252,252,252,0) 70%);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #light {
+      background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(252,70,107,0) 70%);
+    }
+  }
+
+  #light {
     display: inline-block;
     width: 550px;
     height: 550px;
     position: absolute;
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(252,70,107,0) 70%);
   }
 </style>
 
