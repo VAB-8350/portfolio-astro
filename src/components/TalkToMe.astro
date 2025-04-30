@@ -25,7 +25,14 @@ const i18n = getI18N(Astro.currentLocale)
           <label class="text-xs text-secondary-light-text dark:text-secondary-dark-text mb-1" for="email">
             {i18n['TALK-TO-ME']['INPUT-EMAIL']}
           </label>
-          <input required class="h-[40px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text px-3" type="email" id="email" name="email">
+          <input
+            required
+            class="h-[40px] rounded-md bg-semi-white dark:bg-semi-black border border-outline-light dark:border-outline-dark outline-none text-secondary-dark-text px-3 dark:placeholder-secondary-light-text"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+          >
         </div>
 
         <div class="flex flex-col">
@@ -55,7 +62,7 @@ const i18n = getI18N(Astro.currentLocale)
     width: 550px;
     height: 550px;
     position: absolute;
-    background: radial-gradient(circle, rgba(255,0,255,1) 0%, rgba(252,70,107,0) 70%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(252,70,107,0) 70%);
   }
 </style>
 

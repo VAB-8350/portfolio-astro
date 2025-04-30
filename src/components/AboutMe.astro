@@ -12,12 +12,15 @@ const i18n = getI18N(Astro.currentLocale)
   </div>
 
   <div class="p-4 md:p-12 text-sm md:text-xl w-full h-full grid place-items-center border-r md:border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-3">
-    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['FIRST-P']}</p>
+    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['PARAGRAPHS'][0]}</p>
   </div>
 
   <div class="p-4 md:p-12 text-sm md:text-xl w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-5">
-    <p class="pb-5 text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['SECOND-P']}</p>
-    <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty">{i18n['ABOUT-ME']['THIRD-P']}</p>
+    {
+      i18n['ABOUT-ME']['PARAGRAPHS'].slice(1).map((p, i) => (
+        <p class={`${(i18n['ABOUT-ME']['PARAGRAPHS'].slice(1).length - 1) === i ? '' : 'pb-5' } text-secondary-light-text dark:text-secondary-dark-text text-pretty w-full`}>{p}</p>
+      ))
+    }
   </div>
   <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] right-[-10px]"/>
 </section>
