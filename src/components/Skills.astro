@@ -9,15 +9,8 @@ const i18n = getI18N(Astro.currentLocale)
   const originalTitle = title.innerText
   const content = document.getElementById('container-skills')
 
-  content.addEventListener('mouseleave', () => {
-    title.classList.add('opacity-0')
-      setTimeout(() => {
-        title.innerText = originalTitle
-        title.style.color = ''
-        title.classList.remove('opacity-0')
-        title.style.transform = 'translateY(0)'
-      }, 300)
-  })
+  content.addEventListener('mouseleave', reset)
+  title.addEventListener('mouseenter', reset)
 
   techs?.forEach((tech) => {
     tech.addEventListener('mouseenter', () => {
@@ -51,13 +44,22 @@ const i18n = getI18N(Astro.currentLocale)
       },200)
     })
   })
+
+  function reset() {
+    setTimeout(() => {
+      title.innerText = originalTitle
+      title.style.color = ''
+      title.classList.remove('opacity-0')
+      title.style.transform = 'translateY(0)'
+    }, 300)
+  }
 </script>
 
 <section class="grid grid-cols-4 md:grid-cols-[repeat(5,_minmax(200px,_1fr))] place-items-center auto-rows-[100px] md:auto-rows-[200px] relative bg-[rgba(255,_255,_255,_.4)] dark:bg-[rgba(0,_0,_0,_.5)]" id="container-skills">
   <span class="inline-block w-[20px] h-[20px] absolute top-[-11px] left-[-11px] z-10"/>
   <span class="inline-block w-[20px] h-[20px] absolute bottom-[-10px] right-[-10px] z-10"/>
   <div class="w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-4 md:col-span-2">
-    <h2 class="text-black dark:text-white font-['Geist Bold'] font-bold text-3xl text-center duration-300" id="title">{i18n.SKILLS}</h2>
+    <h2 class="text-black dark:text-white font-['Geist Bold'] font-bold text-3xl text-center duration-300 w-full h-full grid place-content-center" id="title">{i18n.SKILLS}</h2>
   </div>
   <div class="group hover:cursor-grab w-full h-full grid place-items-center border-r border-b border-outline-light dark:border-outline-dark col-span-1" color="#3880f6" id="CSS">
     <img loading="lazy" class="w-16 rounded-md object-contain duration-500 group-hover:drop-shadow-[0_0_35px_#3880f6]" src="/skillTech/css.png" alt="css">
