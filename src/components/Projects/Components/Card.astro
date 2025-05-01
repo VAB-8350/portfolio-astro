@@ -13,6 +13,75 @@ const { title, description, image, logo, tech, link, linkCode = false } = Astro.
 
 import { getI18N } from '@i18n/index'
 const i18n = getI18N(Astro.currentLocale)
+
+const technologies = {
+  'Next.js': {
+    textColor: '#FFFFFF',
+    bgColor: '#00000080',
+    borderColor: '#FFFFFF60',  // Borde blanco semitransparente
+    glowColor: '#FFFFFF20'    // Glow sutil para contorno
+  },
+  'JavaScript': {
+    textColor: '#F0DB4F',
+    bgColor: '#F0DB4F20',
+    borderColor: '#F0DB4F60', // Borde amarillo semitransparente
+    glowColor: '#F0DB4F80'
+  },
+  'SASS': {
+    textColor: '#CF649A',
+    bgColor: '#CF649A20',
+    borderColor: '#CF649A60', // Borde rosa semitransparente
+    glowColor: '#CF649A40'
+  },
+  'TypeScript': {
+    textColor: '#007ACC',
+    bgColor: '#007ACC20',
+    borderColor: '#007ACC60', // Borde azul semitransparente
+    glowColor: '#007ACC40'
+  },
+  'MongoDB': {
+    textColor: '#4DB33D',
+    bgColor: '#4DB33D20',
+    borderColor: '#4DB33D60', // Borde verde semitransparente
+    glowColor: '#4DB33D30'
+  },
+  'Puppeteer': {
+    textColor: '#40B5A4',
+    bgColor: '#40B5A420',
+    borderColor: '#40B5A460', // Borde verde agua semitransparente
+    glowColor: '#40B5A430'
+  },
+  'Vercel': {
+    textColor: '#FFFFFF',
+    bgColor: '#33333380',
+    borderColor: '#FFFFFF30', // Borde gris claro semitransparente
+    glowColor: '#FFFFFF10'
+  },
+  'Cloudinary': {
+    textColor: '#3448C5',
+    bgColor: '#3448C520',
+    borderColor: '#3448C560', // Borde azul eléctrico semitransparente
+    glowColor: '#3448C530'
+  },
+  'React.js': {
+    textColor: '#61DAFB',
+    bgColor: '#61DAFB15',
+    borderColor: '#61DAFB50', // Borde cyan semitransparente
+    glowColor: '#61DAFB50'
+  },
+  'LESS': {
+    textColor: '#4D7EFF',
+    bgColor: '#4D7EFF25',
+    borderColor: '#4D7EFF60', // Borde azul brillante semitransparente
+    glowColor: '#4D7EFF40'
+  },
+  'Tailwind': {
+    textColor: '#06B6D4',
+    bgColor: '#06B6D420',
+    borderColor: '#06B6D460', // Borde cyan Tailwind semitransparente
+    glowColor: '#06B6D440'
+  }
+};
 ---
 
 <article class="flex flex-col max-w-[360px] border border-outline-light dark:border-outline-dark rounded-[6px] relative bg-semi-white/70 dark:bg-black/50">
@@ -30,10 +99,22 @@ const i18n = getI18N(Astro.currentLocale)
 
     <p class="text-secondary-light-text dark:text-secondary-dark-text text-pretty text-base">{description}</p>
 
-    <div class="flex flex-wrap gap-1 w-full mb-2">
+    <div class="flex flex-wrap gap-3 w-full mb-2 mt-2">
       {
         tech?.map(techItem => (
-          <span class="text-secondary-light-text dark:text-secondary-dark-text px-2 bg-hover-light dark:bg-hover-dark rounded-3xl">{techItem}</span>
+          <span
+            class="px-2 dark:bg-hover-dark rounded-3xl text-sm"
+            style={{
+              backgroundColor: technologies[techItem]?.bgColor,
+              color: technologies[techItem]?.textColor,
+              border: '1px solid transparent', // Borde transparente por defect
+              borderColor: technologies[techItem]?.borderColor ? technologies[techItem]?.borderColor : 'transparent',
+              boxShadow: '0 0 8px ' + technologies[techItem]?.glowColor,
+              backdropFilter: 'blur(4px)'
+            }}
+          >
+            {techItem}
+          </span>
         ))
       }
     </div>
