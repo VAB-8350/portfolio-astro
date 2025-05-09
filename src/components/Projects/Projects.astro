@@ -11,7 +11,7 @@ const i18n = getI18N(Astro.currentLocale)
     <p class="text-secondary-light-text dark:text-secondary-dark-text text-center text-pretty text-lg">{i18n.PROJECTS.DESCRIPTION}</p>
   </div>
 
-  <div class="flex justify-center items-center md:items-stretch flex-col md:flex-row gap-5 mt-11 md:mt-14 mb-8">
+  <div class="flex justify-center items-center md:items-stretch flex-col md:flex-row flex-wrap gap-5 mt-11 md:mt-14 mb-8">
     <Card
       title='Bucked Up'
       description={i18n.PROJECTS['BUCKEDUP-DESCRIPTION']}

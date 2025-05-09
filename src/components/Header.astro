@@ -85,7 +85,7 @@ const language = Astro.currentLocale
     <!-- navigation -->
     <nav class="flex items-center">
         <!-- desktop -->
-        <ul class="text-secondary-light-text dark:text-[#EEEEEE] font-['Geist Light'] font-normal h-full items-center text-sm hidden sm:flex desktop">
+        <ul class="text-secondary-light-text dark:text-[#EEEEEE] font-['Geist Light'] font-normal h-full items-center text-sm hidden md:flex desktop">
             <li>
                 <a class="p-2 text-base" href="#experience">{i18n.HEADER.EXPERIENCE}</a>
             </li>
@@ -109,7 +109,7 @@ const language = Astro.currentLocale
         </ul>
 
         <!-- mobile -->
-        <div class="sm:hidden">
+        <div class="md:hidden">
             <button id="toggle-menu-btn" class="border-[1px] border-secondary-light-text rounded-full p-1 active:bg-hover-light dark:active:bg-hover-dark">
                 <svg
                 xmlns="http://www.w3.org/2000/svg"
