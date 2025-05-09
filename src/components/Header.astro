@@ -57,6 +57,25 @@ const language = Astro.currentLocale
     }
 </script>
 
+<script>
+    const links = document.querySelectorAll('nav a[href^="#"]')
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault()
+            
+            const href = this.getAttribute('href')
+            const offsetTop = document.querySelector(href).offsetTop
+            const headerHeight = 100 // Altura del header + espacio adicional deseado
+            
+            window.scrollTo({
+                top: offsetTop - headerHeight,
+                behavior: 'smooth'
+            })
+        })
+    })
+</script>
+
 <header class="bg-white dark:bg-semi-black w-full flex justify-between h-16 border-b border-outline-light dark:border-outline-dark px-5 md:px-24 sticky top-0 min-w-full z-50">
     <!-- language -->
     <section>
